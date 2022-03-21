@@ -1,11 +1,22 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome </title>
-</head>
-<body>
+<?php
+session_start();
+include("includes/connection.php");
+include("includes/head.php");
+include("includes/functions.php");
+include("includes/main.php");
+?>
+
+<div id="content" class="container"><!-- container Starts -->
+<div class="row"><!-- row Starts -->
+
+      <?php getPro();?>
+
+
+</div><!-- row Ends -->
+</div><!-- container Ends -->
     
+
+
+<?php include "includes/footer.php" ?>
 </body>
 </html>
