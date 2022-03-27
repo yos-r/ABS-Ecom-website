@@ -9,7 +9,6 @@ include("includes/main.php");
 <div id="content" class="container"><!-- container Starts -->
 <div class="row"><!-- row Starts -->
 
-      <?php getPro();?>
 
 
 </div><!-- row Ends -->

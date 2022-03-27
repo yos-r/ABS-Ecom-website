@@ -47,6 +47,10 @@
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+
+
 <?php
     if(isset($_POST['add_cart'])){ //bouton ajouter au panier inclus
         $ip_add = getRealUserIp();
@@ -68,6 +72,5 @@
             echo "<script>window.open('$pro_url','_self')</script>";
         }
         }
-
 ?>
 <?php } ?> 
