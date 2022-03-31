@@ -1,11 +1,11 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="../style.css" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <?php
-require('../config.php');
+require('config.php');
 
 if (isset($_REQUEST['product_id'], $_REQUEST['product_desc'], $_REQUEST['cat_id'], $_REQUEST['product_img'], $_REQUEST['product_price'], $_REQUEST['product_title'], $_REQUEST['subcat_id'], $_REQUEST['manifacturer'])){
 
@@ -60,7 +60,7 @@ if (isset($_REQUEST['product_id'], $_REQUEST['product_desc'], $_REQUEST['cat_id'
 	<input type="number" class="box-input" name="cat_id" placeholder="cat_id"  >
 	<input type="file" class="box-input" name="product_img" placeholder="product_img"  >
 	<input type="text" class="box-input" name="product_price" placeholder="product_price"  >
-	<input type="number" class="box-input" name="product_title" placeholder="product_title"  >
+	<input type="text" class="box-input" name="product_title" placeholder="product_title"  >
 	<input type="number" class="box-input" name="subcat_id" placeholder="subcat_id"  >
     <div class="input-group">
 			<select class="box-input" name="manifacturer" id="manifacturer" >

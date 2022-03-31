@@ -9,7 +9,7 @@ require('config.php');
 
 if (isset($_REQUEST['admin_id'], $_REQUEST['admin_name'], $_REQUEST['admin_email'], $_REQUEST['admin_pass'])){
 	// récupérer le nom d'utilisateur et supprimer les antislashes ajoutés par le formulaire
-	$admin_id = stripslashes($_REQUEST['$admin_id']);
+	$admin_id = stripslashes($_REQUEST['admin_id']);
 	$admin_id = mysqli_real_escape_string($conn, $admin_id); 
 	// récupérer l'email et supprimer les antislashes ajoutés par le formulaire
 	$admin_name = stripslashes($_REQUEST['admin_name']);
@@ -22,7 +22,7 @@ if (isset($_REQUEST['admin_id'], $_REQUEST['admin_name'], $_REQUEST['admin_email
 	$admin_pass = mysqli_real_escape_string($conn, $admin_pass);
 	
 	$query = "INSERT into 'admins' (admin_id ,admin_name, admin_email,admin_pass)
-				VALUES ('$admin_id ', '$admin_name', '$admin_email', '".hash($password)."')";
+				VALUES ('$admin_id ', '$admin_name', '$admin_email', '$admin_pass')";
 	$res = mysqli_query($conn, $query);
 
     if($res){

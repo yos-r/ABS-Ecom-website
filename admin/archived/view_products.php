@@ -65,7 +65,8 @@
                                     </a>
                                 </td>
                             </tr>
-                            <?php } ?> <!-- ligne terminée -->
+                            <?php }
+                             ?> <!-- ligne terminée -->
                         </tbody>
                     </table>
                 </div>

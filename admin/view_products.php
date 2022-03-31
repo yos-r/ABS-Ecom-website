@@ -52,7 +52,7 @@
                             <tr>
                                 <td><?php echo $pro_id; ?></td>
                                 <td><?php echo $pro_title; ?></td>
-                                <td><img src="images/products/<?php echo $pro_image; ?>" width="60" height="60"></td> <!--a modifier les noms -->
+                                <td><img src="images/products/<?php echo $pro_image; ?>" width="60" height="60"></td> <!--a verifier l path  -->
                                 <td>$ <?php echo $pro_price; ?></td>
                                 <td>$ <?php echo $pro_cat; ?></td>
                                 <td>$ <?php echo $pro_subcat; ?></td>
@@ -62,10 +62,10 @@
 
                                 
                                 <td>  <!-- colonne de suppression-->
-                                    <a href="delete_product.php?product_id=<?php echo $product_id; ?>"> Delete </a>
+                                    <a href="delete_product.php?product_id=<?php echo $pro_id; ?>"> Delete </a>
                                 </td>
                                 <td>  <!-- colonne d'edition-->
-                                    <a href="index.php?edit_product=<?php echo $pro_id; ?>">Edit</a>
+                                    <a href="update_product.php?product_id=<?php echo $pro_id; ?> & product_title=<?php echo $pro_title?> & product_img=<?php echo $pro_image; ?> & product_price=<?php echo $pro_price; ?> & product_cat=<?php echo $pro_cat; ?> & product_subcat=<?php echo $pro_subcat; ?> & product_desc=<?php echo $pro_desc; ?> & product_manif=<?php echo $pro_manif; ?>"> Edit</a>
                                 </td>
                             </tr>
                             <?php } ?> 

@@ -19,9 +19,9 @@
 		<a href="view_products.php">View product </a> 
 		<a href="add_produit.php">Add product</a> |
 		<a href="#">Update product </a> 
-		<a href="#">Delete product</a> 
+		<a href="delete_product.php"> Delete product </a> 
 
-		<a href="../logout.php">Déconnexion</a>
+		<a href="logout.php">Déconnexion</a>
 		</div>
 	</body>
 </html>
