@@ -1,45 +1,47 @@
-<?php
-    session_start();
-    include("includes/connection.php");
-?>
-<!DOCTYPE HTML>
+﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Login</title>
-    <link rel="stylesheet" href="styles/bootstrap.min.css" >
-    <link rel="stylesheet" href="styles/style.css" >
-    <link rel="stylesheet" href="styles/login.css" >
+	<link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+<?php
+require('config.php');
+session_start();
 
-<div class="container" >
-<form class="form-login" action="" method="post" >
-    <h2 class="form-login-heading" >Admin Login</h2>
-    <input type="text" class="form-control" name="admin_email" placeholder="Email Address" required >
-    <input type="password" class="form-control" name="admin_pass" placeholder="Password" required >
-    <button class="btn btn-lg btn-primary btn-block" type="submit" name="admin_login" > Log in</button>
+if (isset($_POST['admin_email']))
+{
+	$admin_email = stripslashes($_REQUEST['admin_email']);
+	$admin_email = mysqli_real_escape_string($conn, $admin_email);
+	echo "--------------".$admin_email ; 
+	$_SESSION['username'] = $admin_email;
+	$admin_pass = stripslashes($_REQUEST['admin_pass']);
+	$admin_pass = mysqli_real_escape_string($conn, $admin_pass);
+	echo "$admin_pass";
+    $query = "SELECT * FROM admins WHERE admin_email=$admin_email and admin_pass=$admin_pass";
+	echo "********************".$query;
+	$result = mysqli_query($conn,$query) ;
+	/*if (!$result)
+	{
+		echo " not ok ";
+	}
+	*/
+	
+	if ($result)  {
+		header('location: admin/home.php');		  
+	}
+	else{
+		$message = "Le nom d'utilisateur ou le mot de passe est incorrect.";
+	}
+}
+?>
+<form class="box" action="" method="post" name="login">
+<h1 class="box-title">Connexion</h1>
+<input type="text" class="box-input" name="admin_email" placeholder="admin_mail ">
+<input type="password" class="box-input" name="admin_pass" placeholder="admin_pass">
+<input type="submit" value="Connexion " name="submit" class="box-button">
+<?php if (! empty($message)) { ?>
+    <p class="errorMessage"><?php echo $message ; ?></p>
+<?php } ?>
 </form>
-</div>
-
 </body>
 </html>
-
-<?php
-if(isset($_POST['admin_login'])){
-    $admin_email = mysqli_real_escape_string($con,$_POST['admin_email']);
-    $admin_pass = mysqli_real_escape_string($con,$_POST['admin_pass']);
-    $get_admin = "select * from admins where admin_email='$admin_email' AND admin_pass='$admin_pass'";
-    $run_admin = mysqli_query($con,$get_admin);
-    $count = mysqli_num_rows($run_admin);
-    if($count==1){
-        $_SESSION['admin_email']=$admin_email; //paramètre de session devenu non null
-        echo "<script>alert('hola ')</script>";
-        echo "<script> window.open('index.php?dashboard','_self') </script>";
-        }
-    else {
-        echo "<script> alert('Email or Password is Wrong') </script>";
-    }
-}
-
-?>

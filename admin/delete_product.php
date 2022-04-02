@@ -1,20 +1,18 @@
-
 <?php
-//accessed through index.php?delete_product=xyz
 
-if(!isset($_SESSION['admin_email'])){
-    echo "<script> window.open('login.php','_self')</script>";
-}
-else {
-    if(isset($_GET['delete_product'])){
-        $delete_id = $_GET['delete_product'];
+
+    if(isset($_GET['product_id']))
+    {
+        $delete_id = $_GET['product_id'];
         $delete_pro = "delete from products where product_id='$delete_id'";
         $run_delete = mysqli_query($con,$delete_pro);
         if($run_delete){
-            echo "<script>alert('One Product Has been deleted')</script>";
-            echo "<script>window.open('index.php?view_products','_self')</script>";
+            echo "deleted succefuly from data base ! ";
         }
-    }
+        else 
+        {
+            echo "error : product not deleted "; 
+        }
     }
 
 ?>

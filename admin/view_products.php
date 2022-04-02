@@ -1,44 +1,40 @@
 <?php
-    if(!isset($_SESSION['admin_email'])){
-        echo "<script>window.open('login.php','_self')</script>";
-    }
+    if(!isset($_SESSION["username"])){
+		header("Location: login.php");
+		exit(); 
+	}
     else {
 ?>
-<!-- première ligne: breadcrumb -->
-<div class="row"><!--  1 row Starts -->
-    <div class="col-lg-12" ><!-- col-lg-12 Starts -->
-        <ol class="breadcrumb" ><!-- breadcrumb Starts -->
-            <li class="active" ><i class="fa fa-dashboard"></i> Dashboard / View Products </li>
-        </ol><!-- breadcrumb Ends -->
-    </div><!-- col-lg-12 Ends -->
+<div class="ligne1">
+
+        <ol class="" >
+            <li class="" > home / View Products </li>
+        </ol>
 </div>
 
-<!-- div du tableau -->
-<div class="row" >
-    <div class="col-lg-12" >
-        <div class="panel panel-default" >
-            <div class="panel-heading" >
-                <h3 class="panel-title" >
-                    <i class="fa fa-money fa-fw" ></i> View Products
-                </h3>
-            </div>
-            <div class="panel-body" >
-                <div class="table-responsive" >
-                    <table class="table table-bordered table-hover table-striped" ><!-- table table-bordered table-hover table-striped Starts -->
-                        <thead>
+
+
+                <div class="ligne 2" >
+                    <table class="" >
+                        
                             <tr>
-                                <th>#</th>
+                                <th>product_id</th>
                                 <th>Title</th>
                                 <th>Image</th>
                                 <th>Price</th>
+                                <th>cat_id</th>
+                                <th>subcat_id</th>
+                                <th>product_desc</th>
+                                <th>manifacturer</th>
+
+
                                 
                                 <th>Delete</th>
                                 <th>Edit</th>
                             </tr>
-                        </thead>
-                        <tbody>
+
+                        
                         <?php
-                            $i = 0;
                             $get_pro = "select * from products";
                             $run_pro = mysqli_query($con,$get_pro);
                             while($row_pro=mysqli_fetch_array($run_pro)){
@@ -46,31 +42,35 @@
                                 $pro_title = $row_pro['product_title'];
                                 $pro_image = $row_pro['product_img'];
                                 $pro_price = $row_pro['product_price'];
-                                $i++;
+                                $pro_cat = $row_pro['cat_id'];
+                                $pro_subcat = $row_pro['subcat_id'];
+                                $pro_desc = $row_pro['product_desc'];
+                                $pro_manif = $row_pro['manifacturer'];
+                                
                             ?>
 
                             <tr>
-                                <td><?php echo $i; ?></td>
+                                <td><?php echo $pro_id; ?></td>
                                 <td><?php echo $pro_title; ?></td>
-                                <td><img src="images/products/<?php echo $pro_image; ?>" width="60" height="60"></td>
+                                <td><img src="images/products/<?php echo $pro_image; ?>" width="60" height="60"></td> <!--a verifier l path  -->
                                 <td>$ <?php echo $pro_price; ?></td>
+                                <td>$ <?php echo $pro_cat; ?></td>
+                                <td>$ <?php echo $pro_subcat; ?></td>
+                                <td>$ <?php echo $pro_desc; ?></td>
+                                <td>$ <?php echo $pro_manif; ?></td>
+
+
                                 
-                                <td> <!-- colonne de suppression-->
-                                    <a href="index.php?delete_product=<?php echo $pro_id; ?>">
-                                    <i class="fa fa-trash-o"> </i> Delete </a>
+                                <td>  <!-- colonne de suppression-->
+                                    <a href="delete_product.php?product_id=<?php echo $pro_id; ?>"> Delete </a>
                                 </td>
-                                <td>
-                                    <a href="index.php?edit_product=<?php echo $pro_id; ?>">
-                                        <i class="fa fa-pencil"> </i> Edit
-                                    </a>
+                                <td>  <!-- colonne d'edition-->
+                                    <a href="update_product.php?product_id=<?php echo $pro_id; ?> & product_title=<?php echo $pro_title?> & product_img=<?php echo $pro_image; ?> & product_price=<?php echo $pro_price; ?> & product_cat=<?php echo $pro_cat; ?> & product_subcat=<?php echo $pro_subcat; ?> & product_desc=<?php echo $pro_desc; ?> & product_manif=<?php echo $pro_manif; ?>"> Edit</a>
                                 </td>
                             </tr>
-                            <?php } ?> <!-- ligne terminée -->
-                        </tbody>
+                            <?php } ?> 
+                        
                     </table>
                 </div>
-            </div><!-- panel-body Ends -->
-        </div><!-- panel panel-default Ends -->
-    </div><!-- col-lg-12 Ends -->
-</div><!-- 2 row Ends -->
+            
 <?php } ?> 

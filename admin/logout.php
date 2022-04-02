@@ -1,8 +1,11 @@
 <?php
-
-    session_start();
-    session_destroy();
-
-        echo "<script>window.open('login.php','_self')</script>";
-
+	// Initialiser la session
+	session_start();
+	
+	// Détruire la session.
+	if(session_destroy())
+	{
+		// Redirection vers la page de connexion
+		header("Location: login.php");
+	}
 ?>
