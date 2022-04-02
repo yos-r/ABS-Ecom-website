@@ -24,7 +24,6 @@ header{
     display: flex;
     background-color:rgb(0, 0, 0);
 }
-
 .logo{
     color: rgb(255, 255, 255);
     font-weight: bold;
@@ -55,6 +54,98 @@ header .navbar li a:hover{
     border-bottom: 2px solid #fb911f;/*remarque:If border-bottom-color is omitted, the color applied will be the color of the text.*/
 
 }
+#cart:hover{
+    border-bottom: none;
+}
+/*search*/
+.button {
+	display: inline-block;
+	margin: 4px 2px;
+	background-color: #2f3640;
+	font-size: 14px;
+	padding-left: 32px;
+	padding-right: 32px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.button:hover {
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+}
+
+.search-container {
+	position: relative;
+	display: inline-block;
+	margin: 4px 2px;
+    margin-left: 20px;
+	height: 50px;
+	width: 50px;
+    border-radius: 40px;
+	vertical-align: bottom;
+}
+
+.searchbutton {
+	position: absolute;
+	font-size: 22px;
+    border-radius: 40px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.search:focus + .searchbutton {
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+    background: none;
+    color: #fff;
+}
+
+.search {
+	position: absolute;
+	left: 49px; /*Button width-1px (Not 50px/100% because that will sometimes show a 1px line between the search box and button)  */
+	background: #2f3640 ;
+	outline: none;
+	border: none;
+    border-radius: 40px;
+	padding: 0;
+	width: 0;
+	height: 100%;
+	z-index: 10;
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+}
+
+.search:focus {
+	width: 420px; 
+	padding: 0 16px 0 0;
+}
+
+.expandright {
+	left: auto;
+	right: 49px; 
+}
+
+.expandright:focus {
+	padding: 0 0 0 16px;
+}
+/*end search*/
+
 /*fin css navbar**/
 
 .banniere{
@@ -64,7 +155,7 @@ header .navbar li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image:url(images/background.jpg);
+    background-image:url(images/index/background.jpg);
     background-size: cover;
 }
 
@@ -93,7 +184,6 @@ header .navbar li a:hover{
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: 0.5s;
-    margin-left: 10px;
 }
 .btn2{
     font-size: 1em;
@@ -109,9 +199,13 @@ header .navbar li a:hover{
     margin-left: 10px;
 }
 
-.btn1:hover{
-letter-spacing: 4px;
+.btn1:hover,.btn2:hover{
+    letter-spacing: 4px;
+    color:rgb(255, 255, 255);
+    position: relative;
+    bottom:5px;
 }
+
 section{
     padding: 100px;
 }
@@ -149,8 +243,9 @@ section{
 
 
 .row .col50 img{
+    object-fit: contain;
     height: 450px;
-    width: 600px;
+    width: 100%;
     position: relative;
 }
 
@@ -162,7 +257,7 @@ section{
     flex-direction: column;
 }
 
-.menu{
+/* .menu{
     margin-top: -100px;
 }
 
@@ -175,6 +270,7 @@ section{
 
 .menu .contenu .box{
     width: 350px;
+    height: 800px;
     margin: 20px;
     border: 20px solid #fff;
     box-shadow: 20px 15px 35px rgba(0,0,0, 0.8);
@@ -233,10 +329,10 @@ section{
     color: #111;
     font-weight: 400;
     text-align: center;
-}
+} */
 
 .temoignage{
-    background-image: url(./images/bg2.jpg);
+    background-image: url(./images/index/bg2.jpg);
     background-size: cover;
 }
 
@@ -252,6 +348,7 @@ section{
 
 .temoignage .contenu .box{
     width: 340px;
+    height: 380px;
     margin: 20px;
     background: #fff;
     display: flex;
@@ -295,6 +392,12 @@ section{
     font-weight: 600;
 }
 
+.temoignage .contenu .box .text p{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-style: italic;
+}
+
 .blanc .titre-texte{
     color: #fff;
 }
@@ -304,23 +407,35 @@ section{
     color: #fff;
 }
 
+/* css page de contact**/
 .contact{
-    background-image: url(./images/pexels-pixabay-159306.jpg);
     background-size: cover;
-    box-shadow: 2px 2px 12px rgba(0,0,0, 0.8);
     width: 100%;
-    background-position: unset;
 }
 
 .contactform{
     padding: 75px 50px;
     background: #fff;
-    box-shadow: 5px 15px 50px rgba(0,0,0, 0.8);
+    box-shadow: 0px -1px 9px 4px rgb(255 255 255 / 80%);
     max-width: 500px;
     margin-top: 50px;
+    margin: auto;
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 38%;
+}
+
+.contact .titre-text span{
+    color: #fb911f;
+    font-size: 2em;
+}
+
+#color{
+    color: rgb(255, 255, 255);
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-align: center;
+
 }
 
 .contactform .inputboite{
@@ -329,71 +444,42 @@ section{
     margin-bottom: 20px;
 }
 
-
 .contactform h3{
-    color: rgb(0, 0, 0);
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    color: #000000;
+    margin-bottom: 7px;
 }
 
-.contactform .inputboite input,
-.contactform .inputboite textarea{
-    width: 100%;
-    border: 1px solid #555;
+input.inputboite,textarea.inputboite{
+    
+    border: 1px solid rgb(0, 0, 0);
     padding: 10px;
-    color: #111;
-    outline: none;
+    color: rgb(0, 0, 0);
     font-size: 16px;
     font-weight: 300;
-    resize: none;
+    resize: none;/*La propriété resize permet de contrôler le caractère redimensionnable d'un élément et notamment la direction dans laquelle celui-ci peut être redimensionné.*/
 }
 
-.contactform .inputboite input[type="submit"]{
+input[type="submit"].inputboite{
     font-size: 1em;
     font-weight: 700;
     color: #ffff;
     background: #fb911f;
-    display: inline-block;
+    display: flex;
     cursor: pointer;
     text-transform: uppercase;
-    text-decoration: none;
     letter-spacing: 2px;
-    outline: none;
-    border: none;
+    border: none;/* remarque par defaut il ya une bordure*/
     transition: 0.5s;
-    max-width: 120px;
+    width: 150px;
     align-items: center;
     justify-content: center;
-}
+    margin: auto;
 
-
-.copyright{
-    padding: 20px 40px;
-    border-top: 2px solid rgba(0,0,0, 0.1);
-    background: rgba(228,222,222,);
-    text-align: center;
 }
+input[type="submit"].inputboite:hover{
+    letter-spacing: 5px; }
 
-.copyright p:nth-child(1){
-    color: #333;
-}
-
-.copyright a {
-    color: #fb911f;
-    text-decoration: none;
-    font-weight: 600;
-    font-style: italic;
-}
-
-.contact .titre-text {
-    color: #fff;
-    font-size: 2em;
-}
-
-.contact .titre-text span{
-    color: #fb911f;
-    font-size: 2em;
-}
+/*fin css page de contact*/
 
 header.sticky{
     background: #fff;
@@ -418,8 +504,13 @@ header.sticky li a:hover{
     max-height: 50vh;
   }
 
-.carousel-item{
-    padding:50px;
+.carousel-item {
+    height: 420px;
+    margin-bottom: 40px;
+}
+
+.carousel-item img{
+    object-fit: contain;
 }
 
 section{
@@ -437,8 +528,8 @@ section{
     right: 15px;
 }
 
-
-@media (max-width: 991px) {
+ 
+@media (max-width:820px) {
 header, 
 header.sticky{
     padding: 10px 20px;
@@ -451,8 +542,6 @@ header .navbar li{
 header .navbar li a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.6em;
-    font-weight: 300;
 }
 
 section{
@@ -472,11 +561,11 @@ header .navbar.active{
     align-items: center;
 }
 
-.menuToggle{
+/* .menuToggle{
     position: relative;
     width: 40px;
     height: 40px;
-    background-image: url(./images/menu.png);
+    background-image: url(./images/index/menu.png);
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
@@ -485,7 +574,7 @@ header .navbar.active{
 
 .menuToggle.active
 {
-    background-image: url(./images/close.png);
+    background-image: url(./images/index/close.png);
     background-size: 25px;
     background-repeat: no-repeat;
     background-origin: center;
@@ -493,7 +582,7 @@ header .navbar.active{
 
 header.sticky .menuToggle{
     filter: invert(1);
-}
+} */
 
 
 .banniere .contenu h2{
@@ -501,7 +590,7 @@ header.sticky .menuToggle{
 }
 
 .row .col50 img{
-    margin-left: 18%;
+    width:100%;
 }
 
 .contenu p:nth-child(2){
@@ -531,11 +620,6 @@ header.sticky .menuToggle{
 text-align: center;
 }
 
-.contactform{
-    margin-left: 25%;
-}
-
-
     .row .col50 {
         position: relative;
         width: 100%;
@@ -548,9 +632,13 @@ text-align: center;
     .row{
         flex-direction: column;
     }
+    
+.search-container{
+    margin-left: 20px;
 }
+} 
 
-@media (max-width: 480px)
+@media (max-width: 420px)
 {
     .banniere .contenu h2{
         font-size: 2.2em;
@@ -559,8 +647,6 @@ text-align: center;
 
     .titre-text{
         color: #fff;
-        font-size: 2rem;
-        font-weight: 300;
         text-transform: capitalize;
     }
 
@@ -572,4 +658,21 @@ text-align: center;
     .temoignage p{
         text-align: center;
     }
+    .expandright {
+        left: 49px;
+        right: auto; 
+    }
+    
+    .expandright:focus {
+        padding: 0 0 0 16px;
+    }
+    .search{
+        width: 240px; 
+        padding: 0 16px 0 0;
+    }
+    .searchbutton{
+        background: none;
+        color: #fff;
+    }
+    
 }
