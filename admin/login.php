@@ -17,7 +17,7 @@ if (isset($_POST['admin_email']))
 	$admin_pass = stripslashes($_REQUEST['admin_pass']);
 	$admin_pass = mysqli_real_escape_string($conn, $admin_pass);
 	echo "$admin_pass";
-    $query = "SELECT * FROM admins WHERE admin_email=$admin_email and admin_pass=$admin_pass";
+    $query = "SELECT * FROM admins WHERE admin_email='$admin_email' and admin_pass='$admin_pass'";
 	echo "********************".$query;
 	$result = mysqli_query($conn,$query) ;
 	/*if (!$result)

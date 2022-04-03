@@ -1,10 +1,3 @@
-<?php
-    if(!isset($_SESSION["username"])){
-		header("Location: login.php");
-		exit(); 
-	}
-    else {
-?>
 <div class="ligne1">
 
         <ol class="" >
@@ -73,4 +66,3 @@
                     </table>
                 </div>
             
-<?php } ?> 
