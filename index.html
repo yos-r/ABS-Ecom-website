@@ -17,32 +17,34 @@
 <!--navbar-->
 <header>
         <nav class="navbar navbar-expand-md navbar-dark">
-          <a href="#" class="logo"><span>A</span>BS</a><!--on doit placer le logo-->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="logo-area">
+                <a href="#" class="logo"><span>A</span>BS</a><!--on doit placer le logo-->
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-        <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
-            <ul class="navbar-nav">
-                <li><a href="#banniere" onclick="toggleMenu();">Accueil</a></li>
-                <li><a href="#apropos" onclick="toggleMenu();">Apropos</a></li>
-                <li><a href="#produits" onclick="toggleMenu();">Produits</a></li>
-                <li><a href="#temoignage" onclick="toggleMenu();">Temoignage</a></li>
-                <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
-                <li><a id="cart" href="#chariot" onclick="toggleMenu();">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+                <ul class="navbar-nav">
+                    <li><a href="#banniere">Accueil</a></li>
+                    <li><a href="#apropos">Apropos</a></li>
+                    <li><a href="#produits">Produits</a></li>
+                    <li><a href="#temoignage">Temoignage</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a id="cart" href="#chariot">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
                             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                         </svg>
-                    </a>
-                </li>
-            </ul>
-          <div class="search-container">
-            <form action="/search" method="get">
-              <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
-              <label class="button searchbutton" for="searchright"><i class="fas fa-search"></i></label>
-            </form>
-          </div>
-        </div>
-    </nav> 
+                        </a>
+                    </li>
+                </ul>
+                <div class="search-container">
+                    <form action="/search" method="get">
+                        <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+                        <label class="button searchbutton" for="searchright"><i class="fas fa-search"></i></label>
+                    </form>
+                </div>
+            </div>
+        </nav> 
 </header>
 <!--fin navbar-->
 
