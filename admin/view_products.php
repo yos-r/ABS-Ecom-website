@@ -1,3 +1,7 @@
+
+ <?php
+ require('config.php');
+ ?>
 <div class="ligne1">
 
         <ol class="" >
@@ -29,7 +33,7 @@
                         
                         <?php
                             $get_pro = "select * from products";
-                            $run_pro = mysqli_query($con,$get_pro);
+                            $run_pro = mysqli_query($conn,$get_pro);
                             while($row_pro=mysqli_fetch_array($run_pro)){
                                 $pro_id = $row_pro['product_id'];
                                 $pro_title = $row_pro['product_title'];
@@ -38,7 +42,7 @@
                                 $pro_cat = $row_pro['cat_id'];
                                 $pro_subcat = $row_pro['subcat_id'];
                                 $pro_desc = $row_pro['product_desc'];
-                                $pro_manif = $row_pro['manifacturer'];
+                                $pro_manif = $row_pro['manufacturer_id'];
                                 
                             ?>
 

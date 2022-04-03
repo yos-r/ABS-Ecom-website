@@ -1,3 +1,14 @@
+<?php
+//require('config.php');
+$product_id=$_GET['product_id'];
+$product_title=$_GET['product_title'];
+$product_img=$_GET['product_img'];
+$product_price=$_GET['product_price'];
+$product_cat=$_GET['product_cat'];
+$product_subcat=$_GET['product_subcat'];  
+$product_desc=$_GET['product_desc'];
+$product_manif=$_GET['product_manif']; 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,18 +18,7 @@
     <title>Document</title>
 </head>
 <body>
-<?php
-require('config.php');
 
-$product_id=$_POST["product_id"];
-$product_title=$_POST["product_title"];
-$product_img=$_POST["product_img"];
-$product_price=$_POST["product_price"];
-$product_cat=$_POST["product_cat"];
-$product_subcat=$_POST["product_subcat"];  
-$product_desc=$_POST["product_desc"];
-$product_manif=$_POST["product_manif"]; 
-?>
     <form action=""  method="GET">
         <table >
             <tr>
@@ -75,6 +75,7 @@ $product_manif=$_POST["product_manif"];
 
 </html>
 <?php
+require('config.php');
 if ($_GET["submit"])
 {
 $product_id=$_GET['product_id'];
@@ -86,7 +87,8 @@ $product_subcat=$_GET['product_subcat'];
 $product_desc=$_GET['product_desc'];
 $product_manif=$_GET['product_manif'];
 
-$query="UPDATE products SET product_id='$product_id' , product_title='$product_title' , product_img='$product_img' , product_price='$product_price' , product_cat='$product_cat' , product_subcat='$product_cat' , product_desc='$product_desc' , product_manif='$product_manif' " ; 
+$query="UPDATE products SET  product_title='$product_title' , product_img='$product_img' , product_price='$product_price' , product_cat='$product_cat', product_subcat='$product_cat' , product_desc='$product_desc' , product_manif'='$product_manif' 
+WHERE product_id='$product_id' " ; 
 $data=mysqli_query($conn,$query);
 if($data)
 {
@@ -98,27 +100,4 @@ else {
 } 
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>

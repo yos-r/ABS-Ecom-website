@@ -43,7 +43,7 @@ if (isset($_REQUEST['product_id'], $_REQUEST['product_desc'], $_REQUEST['cat_id'
 	
     $query = "INSERT into 'admins' ('product_id','product_desc','cat_id','product_img','product_price','product_title','subcat_id','manifacturer')
 				  VALUES ('$product_id', '$product_desc', '$cat_id', '$product_img','$product_price','$product_title','$subcat_id','$manifacturer')";
-    $res = mysqli_query($conn, $query);
+    $res = mysqli_query($conn,$query);
 
     if($res){
        echo "<div class='sucess'>
@@ -51,7 +51,8 @@ if (isset($_REQUEST['product_id'], $_REQUEST['product_desc'], $_REQUEST['cat_id'
              <p>Cliquez <a href='home.php'>ici</a> pour retourner à la page d'accueil</p>
 			 </div>";
     }
-}else{
+}
+
 ?>
 <form class="box" action="" method="post">
     <h1 class="box-title">Add user</h1>
@@ -72,6 +73,5 @@ if (isset($_REQUEST['product_id'], $_REQUEST['product_desc'], $_REQUEST['cat_id'
 	</div>
     <input type="submit" name="submit" value="+ Add" class="box-button" />
 </form>
-<?php } ?>
 </body>
 </html>
