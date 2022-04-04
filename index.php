@@ -15,7 +15,6 @@ require_once("includes/main.php");
     </div>
 </section>
 <!--fin page d acceuil-->
-<!--page apropos-->
 <section class="apropos" id="apropos">
    <div class="row">
         <div class="col50">

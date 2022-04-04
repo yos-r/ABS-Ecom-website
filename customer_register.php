@@ -5,7 +5,7 @@ session_start();
     require_once("includes/head.php");
     require_once("includes/functions.php");
     require_once("includes/main.php");
-?>2j
+?>
 <div id="content" >
 <div class="container" >
 <div class="col-md-12">
