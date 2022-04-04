@@ -2,7 +2,7 @@
 session_start();
 include("includes/connection.php");
 include("includes/head.php");
-include("functions/functions.php");
+include("includes/functions.php");
 include("includes/main.php"); //header
 ?>
 <div id="content" >
@@ -17,16 +17,16 @@ include("includes/main.php"); //header
                 $run_cart = mysqli_query($con,$select_cart);
                 $count = mysqli_num_rows($run_cart);
             ?>
-            <p class="text-muted" > You currently have <?php echo $count; ?> item(s) in your cart. </p>
+            <p class="text-muted" > Vous avez <?php echo $count; ?>éléments dans votre panier </p>
             <div class="table-responsive" >
                 <table class="table" >
                     <thead>
                         <tr>
-                            <th colspan="2" >Product</th>
-                            <th>Quantity</th>
-                            <th>Unit Price</th>
-                            <th colspan="1">Delete</th>
-                            <th colspan="2"> Sub Total </th>
+                            <th colspan="2" >Produit</th>
+                            <th>Quantité</th>
+                            <th>Prix unitaire</th>
+                            <th colspan="1">Supprimer</th>
+                            <th colspan="2"> Sous Total </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -46,12 +46,12 @@ include("includes/main.php"); //header
                             $total += $sub_total;
                     ?>
                     <tr><!-- tr Starts -->
-                        <td><img src="admin/images/<?php echo $product_img; ?>" ></td>
+                        <td><img src="images/<?php echo $product_img; ?>" ></td>
                         <td><a href="#" > <?php echo $product_title; ?> </a></td>
                         <td><input type="text" name="quantity" value="<?php echo $_SESSION['pro_qty']; ?>" data-product_id="<?php echo $pro_id; ?>" class="quantity form-control"></td>
                         <td> $<?php echo $only_price; ?>.00</td>
                         <td><input type="checkbox" name="remove[]" value="<?php echo $pro_id; ?>"></td>
-                        <td>$<?php echo $sub_total; ?>.00</td>
+                        <td>DT<?php echo $sub_total; ?>.00</td>
                     </tr>
                 <?php } } ?>
                     </tbody>

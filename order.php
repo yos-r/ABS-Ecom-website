@@ -2,8 +2,12 @@
 include("includes/connection.php");
 include("includes/head.php");
 include("includes/functions.php");
+include("includes/main.php");
 ?>
 <?php
+    if(isset($_GET['c_id'])){
+        $customer_id = $_GET['c_id'];
+    }
     $ip_add = getRealUserIp();
     $status = "pending";
     $invoice_no = mt_rand(); 
@@ -13,11 +17,11 @@ include("includes/functions.php");
         $pro_id = $row_cart['p_id'];
         $pro_qty = $row_cart['qty'];
         $sub_total = $row_cart['p_price']*$pro_qty;
-        $insert_customer_order = "insert into orders (customer_id,due_amount,invoice_no,qty,order_date,order_status) values ('$customer_id','$sub_total','$invoice_no','$pro_qty',NOW(),'$status')";
+        $insert_customer_order = "insert into orders (customer_id,due_amount,invoice_no,order_date,order_status) values ('$customer_id','$sub_total','$invoice_no','$pro_qty',NOW(),'$status')";
         $run_customer_order = mysqli_query($con,$insert_customer_order);
         $delete_cart = "delete from cart where ip_add='$ip_add'";
         $run_delete = mysqli_query($con,$delete_cart);
-        echo "<script>alert('Your order has been submitted,Thanks ')</script>";
+        echo "<script>alert('Votre commande est validée et sera traitée ! ')</script>";
         echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
     }
 ?>

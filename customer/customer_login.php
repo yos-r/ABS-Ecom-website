@@ -1,10 +1,13 @@
 <?php
 session_start();
     require("requires/connection.php");
-    require("requires/head.php");
-    require("requires/main.php");
+    require("requires/functions.php");
+    require("requires/head.php"); //linking to stylesheet
+    require("requires/main.php"); //header : customer's pov
 ?>
-
+<div id="content" >
+<div class="container" >
+<div class="col-md-12">
 <div class="box" >
     <center>
     <h1>Login</h1>
@@ -23,12 +26,12 @@ session_start();
     </div>
     <div class="text-center" >
         <button name="login" value="Login" class="btn btn-primary" >
-        
+        Se connecter </button>
     </div>
 </form>
 
 <center>
-    <a href="customer_register.php"><h3>are you new here?</h3></a>
+    <a href="../customer_register.php"><h3>s'inscrire ici</h3></a>
 </center>
 </div>
 
@@ -51,7 +54,7 @@ if(isset($_POST['login'])){
     if($check_customer==1 AND $check_cart==0){
         $_SESSION['customer_email']=$customer_email;
         echo "<script>alert('You are Logged In')</script>";
-        echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
+        echo "<script>window.open('my_account.php?my_orders','_self')</script>";
     }
     else {
         $_SESSION['customer_email']=$customer_email;
@@ -60,6 +63,9 @@ if(isset($_POST['login'])){
     } 
 
 } ?>
+</div>
+</div>
+</div>
 <?php include("requires/footer.php") ?>
 </body>
 </html>
