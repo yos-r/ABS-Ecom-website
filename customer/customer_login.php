@@ -66,6 +66,6 @@ if(isset($_POST['login'])){
 </div>
 </div>
 </div>
-<?php include("requires/footer.php") ?>
+<?php require("requires/footer.php") ?>
 </body>
 </html>
