@@ -1,7 +1,7 @@
 <div class="box" >
     <center>
     <h1>Login</h1>
-    <p class="lead" >I'm already a customer</p>
+    <p class="lead" >Je suis un(e) client(e) inscrit</p>
     </center>
 </div>
 

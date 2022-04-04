@@ -1,12 +1,11 @@
 <!-- page that contains product description through $_GET parameter -->
+<!-- page produit: details.php?pro_id=url>
 <?php
     session_start();
-
-    include("includes/connection.php");
-    include("includes/head.php");
-    include("includes/functions.php");
-    include("includes/main.php");
-
+    require_once("includes/connection.php");
+    require_once("includes/head.php");
+    require_once("includes/functions.php");
+    require_once("includes/main.php");
 ?>
 <!-- html for product page starts here -->
 <?php
@@ -20,23 +19,26 @@
     else{
        $row_product = mysqli_fetch_array($run_product);
       $pro_id = $row_product['product_id'];
+      $pro_cat_id=$row_product['cat_id'];
+      $pro_subcat_id=$row_product['subcat_id'];
       $pro_title = $row_product['product_title'];
       $pro_price = $row_product['product_price'];
       $pro_desc = $row_product['product_desc'];
       $pro_img = $row_product['product_img'];
       $pro_url = $row_product['product_url'];
+
+      $get_p_cat = "select * from categories where cat_id='$pro_cat_id'";
+      $run_p_cat = mysqli_query($con,$get_p_cat);
+      $row_p_cat = mysqli_fetch_array($run_p_cat);
+      $p_cat_title = $row_p_cat['cat_title'];
+
+      $get_p_subcat = "select * from subcategories where subcat_id='$pro_subcat_id'";
+      $run_p_subcat = mysqli_query($con,$get_p_subcat);
+      $row_p_subcat = mysqli_fetch_array($run_p_subcat);
+      $p_subcat_title = $row_p_subcat['subcat_title'];
 ?>
 
-<div id="content" ><!-- content Starts -->
-<div class="container" ><!-- container Starts -->
 
-
-
-
-
-
-</div><!-- container Ends -->
-</div><!-- content Ends -->
 
 
 
@@ -47,6 +49,8 @@
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
 
 
 
