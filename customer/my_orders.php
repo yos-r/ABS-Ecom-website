@@ -3,11 +3,10 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>Amount</th>
-                <th>Invoice</th>
-                <th>Order Date</th>
-                <th>Status</th>
-                <th>Action</th>
+                <th>Montant</th>
+                <th>Facture</th>
+                <th> Date</th>
+                <th>Statut</th>
             </tr>
         </thead>
         <tbody>
@@ -28,10 +27,11 @@
                 $order_status = $row_orders['order_status'];
                 $i++;
                 if($order_status=='pending'){
-                     $order_status = "<b style='color:red;'>Unpaid</b>";
+                     $order_status = '<b style="display:inline;color:red;">En cours de traitement</b> | <button name="cancel"> Annuler</button>"';
+                     // ajout d'un bouton d'annulation
                 }
                 else{
-                    $order_status = "<b style='color:green;'>Paid</b>";
+                    $order_status = "<b style='color:green;'>Complète</b>";
                 }
                 ?>
             <tr>
@@ -40,10 +40,25 @@
                 <td><?php echo $invoice_no; ?></td>
                 <td><?php echo $order_date; ?></td>
                 <td><?php echo $order_status; ?></td>
-                <td><a href="confirm.php?order_id=<?php echo $order_id; ?>" target="blank" class="btn btn-success btn-xs" > Confirm If Paid </a>
-                </td>
             </tr>
             <?php } ?>
         </tbody>
     </table>
 </div>
+
+<!--
+<?php if(isset($_POST['cancel'])){
+$_id = $customer_id;
+$c_name = $_POST['c_name'];
+$c_email = $_POST['c_email'];
+$c_address = $_POST['c_address'];
+$update_customer = "update customers set customer_name='$c_name',customer_email='$c_email',customer_address='$c_address' where customer_id='$update_id'";
+$run_customer = mysqli_query($con,$update_customer);
+if($run_customer){
+    echo "<script>alert('Compte mis à jour')</script>";
+    echo "<script>window.open('logout.php','_self')</script>";
+}
+}?>
+-->
+
+
