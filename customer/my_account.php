@@ -4,10 +4,10 @@ if(!isset($_SESSION['customer_email'])){
   echo "<script>window.open('../checkout.php','_self')</script>"; //lemme speak to the manager
 }
 else {
-  include("includes/connection.php");
-  include("includes/head.php");
-  include("includes/functions.php");
-  include("includes/main.php");
+  include("requires/connection.php");
+  include("requires/head.php");
+  include("requires/functions.php");
+  include("requires/main.php");
 ?>
 
 <div id="content" >
@@ -24,13 +24,10 @@ else {
     </div>
 
     <div class="col-md-9" >
-      <div class="box" ><!-- box starts -->
+      <div class="box" >
         <?php
             if(isset($_GET['my_orders'])){
               include("my_orders.php");
-            }
-            if(isset($_GET['pay_offline'])) {
-                include("pay_offline.php");
             }
             if(isset($_GET['edit_account'])) {
                 include("edit_account.php");
@@ -48,6 +45,6 @@ else {
 </div>
 </div>
 
-<?php include("../includes/footer.php");?>
+<?php include("requires/footer.php");?>
 <script src="js/jquery.min.js"> </script>
 <?php }?>
