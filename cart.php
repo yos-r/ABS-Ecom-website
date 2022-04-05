@@ -10,7 +10,7 @@ include("includes/main.php"); //header
     <div class="col-md-9" id="cart" >
         <div class="box" >
         <form action="cart.php" method="post" enctype="multipart-form-data" ><!-- form Starts -->
-            <h1> Shopping Cart </h1>
+            <h1> Panier </h1>
             <?php
                 $ip_add = getRealUserIp();
                 $select_cart = "select * from cart where ip_add='$ip_add'";
@@ -45,36 +45,36 @@ include("includes/main.php"); //header
                             $_SESSION['pro_qty'] = $pro_qty;
                             $total += $sub_total;
                     ?>
-                    <tr><!-- tr Starts -->
+                    <tr>
                         <td><img src="images/<?php echo $product_img; ?>" ></td>
                         <td><a href="#" > <?php echo $product_title; ?> </a></td>
                         <td><input type="text" name="quantity" value="<?php echo $_SESSION['pro_qty']; ?>" data-product_id="<?php echo $pro_id; ?>" class="quantity form-control"></td>
-                        <td> $<?php echo $only_price; ?>.00</td>
+                        <td> <?php echo $only_price; ?>.00 D.T.</td>
                         <td><input type="checkbox" name="remove[]" value="<?php echo $pro_id; ?>"></td>
-                        <td>DT<?php echo $sub_total; ?>.00</td>
+                        <td><?php echo $sub_total; ?>.00 D.T.</td>
                     </tr>
                 <?php } } ?>
                     </tbody>
                     <tfoot>
                         <tr>
                         <th colspan="5"> Total </th>
-                        <th colspan="2"> $<?php echo $total; ?>.00 </th>
+                        <th colspan="2"> <?php echo $total; ?>.00 </th>
                         </tr>
                     </tfoot>
-                </table><!-- table Ends -->
+                </table>
                 
-                <div class="box-footer"><!-- box-footer Starts -->
-                    <div class="pull-left"><!-- pull-left Starts -->
+                <div class="box-footer">
+                    <div class="pull-left">
                         <a href="index.php" class="btn btn-default"> Continue Shopping </a>
                     </div>
-                    <div class="pull-right"><!-- pull-right Starts -->
+                    <div class="pull-right">
                         <button class="btn btn-info" type="submit" name="update" value="Update Cart">
-                        <i class="fa fa-refresh"></i> Update Cart
+                         Mettre à jour panier
                         </button>
-                        <a href="checkout.php" class="btn btn-success">Proceed to Checkout <i class="fa fa-chevron-right"></i></a>
-                    </div><!-- pull-right Ends -->
+                        <a href="checkout.php" class="btn btn-success">Commander</i></a>
+                    </div>
 
-                </div><!-- box-footer Ends -->
+                </div>
             </form><!-- form Ends -->
             </div> <!-- box ends -->
             

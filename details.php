@@ -9,7 +9,7 @@
 ?>
 <!-- html for product page starts here -->
 <?php
-    $product_id = @$_GET['pro_id'];
+    $product_id = @$_GET['pro_id']; // details.php?pro_id=xyz : get the xyz
     $get_product = "select * from products where product_url='$product_id'";
     $run_product = mysqli_query($con,$get_product);
     $check_product = mysqli_num_rows($run_product);
@@ -17,7 +17,7 @@
         echo "<script> window.open('index.php','_self') </script>";
     }
     else{
-       $row_product = mysqli_fetch_array($run_product);
+      $row_product = mysqli_fetch_array($run_product);
       $pro_id = $row_product['product_id'];
       $pro_cat_id=$row_product['cat_id'];
       $pro_subcat_id=$row_product['subcat_id'];
@@ -39,21 +39,11 @@
 ?>
 
 
-
-
-
-
-
 <?php include("includes/footer.php"); ?>
 <script src="js/jquery.min.js"> </script>
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
-
-
-
-
-
 
 <?php
     if(isset($_POST['add_cart'])){ //bouton ajouter au panier inclus
@@ -63,7 +53,7 @@
         $check_product = "select * from cart where ip_add='$ip_add' AND p_id='$p_id'";
         $run_check = mysqli_query($con,$check_product);
         if(mysqli_num_rows($run_check)>0){
-            echo "<script>alert('This Product is already added in cart')</script>";
+            echo "<script>alert('Produit déjà dans le panier')</script>";
             echo "<script>window.open('$pro_url','_self')</script>";
         }
         else {

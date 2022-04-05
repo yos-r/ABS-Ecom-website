@@ -12,7 +12,7 @@
                 echo " <h3 align='center' class='panel-title'> Name : $customer_name </h3>";
             }
         ?>
-    </div><!-- panel-heading ends -->
+    </div>
 
     <div class="panel-body"><!-- panel-body Starts -->
         <ul class="nav nav-pills nav-stacked"><!-- nav nav-pills nav-stacked Starts -->
@@ -23,15 +23,15 @@
                 <a href="my_account.php?edit_account"> <i class="fa fa-pencil"></i> Edit Account </a>
             </li>
             <li class="<?php if(isset($_GET['change_pass'])){ echo "active"; } ?>">
-                <a href="my_account.php?change_pass"> <i class="fa fa-user"></i> Change Password </a>
+                <a href="my_account.php?change_pass"> <i class="fa fa-user"></i> Changer mot de passe </a>
             </li>
             
             <li class="<?php if(isset($_GET['delete_account'])){ echo "active"; } ?>">
-                <a href="my_account.php?delete_account"> <i class="fa fa-trash-o"></i> Delete Account </a>
+                <a href="my_account.php?delete_account"> <i class="fa fa-trash-o"></i> Supprimer compte </a>
             </li>
             <li>
-                <a href="logout.php"> <i class="fa fa-sign-out"></i> Logout </a>
+                <a href="logout.php"> <i class="fa fa-sign-out"></i> Se déconnecter </a>
             </li>
-        </ul><!-- nav nav-pills nav-stacked Ends -->
+        </ul>
     </div><!-- panel-body Ends -->
-</div><!-- panel panel-default sidebar-menu Ends -->
+</div>
