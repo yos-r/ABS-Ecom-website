@@ -7,30 +7,29 @@
 <?php
 require('config.php');
 
-if (isset($_REQUEST['product_id'], $_REQUEST['product_desc'], $_REQUEST['cat_id'], $_REQUEST['product_img'], $_REQUEST['product_price'], $_REQUEST['product_title'], $_REQUEST['subcat_id'], $_REQUEST['manifacturer'])){
-
-	$product_id = stripslashes($_REQUEST['product_id']);
+if (isset($_POST['submit'])){
+	$product_id = stripslashes($_POST['product_id']);
 	$product_id = mysqli_real_escape_string($conn, $product_id); 
 
-	$product_desc = stripslashes($_REQUEST['product_desc']);
+	$product_desc = stripslashes($_POST['product_desc']);
 	$product_desc = mysqli_real_escape_string($conn, $product_desc);
 
-	$cat_id = stripslashes($_REQUEST['cat_id']);
+	$cat_id = stripslashes($_POST['cat_id']);
 	$cat_id = mysqli_real_escape_string($conn, $cat_id);
 
-	$product_img = stripslashes($_REQUEST['product_img']);
+	$product_img = stripslashes($_POST['product_img']);
 	$product_img = mysqli_real_escape_string($conn, $product_img);
 
-	$product_price = stripslashes($_REQUEST['product_price']);
+	$product_price = stripslashes($_POST['product_price']);
 	$product_price = mysqli_real_escape_string($conn, $product_price);
 
-	$product_title = stripslashes($_REQUEST['product_title']);
+	$product_title = stripslashes($_POST['product_title']);
 	$product_title = mysqli_real_escape_string($conn, $product_title);
 
-	$subcat_id = stripslashes($_REQUEST['subcat_id']);
+	$subcat_id = stripslashes($_POST['subcat_id']);
 	$subcat_id = mysqli_real_escape_string($conn, $subcat_id);
 
-	$manifacturer = stripslashes($_REQUEST['manifacturer']);
+	$manifacturer = stripslashes($_POST['manifacturer']);
 	$manifacturer = mysqli_real_escape_string($conn, $manifacturer);
 
 
@@ -41,16 +40,19 @@ if (isset($_REQUEST['product_id'], $_REQUEST['product_desc'], $_REQUEST['cat_id'
 
 
 	
-    $query = "INSERT into 'admins' ('product_id','product_desc','cat_id','product_img','product_price','product_title','subcat_id','manifacturer')
-				  VALUES ('$product_id', '$product_desc', '$cat_id', '$product_img','$product_price','$product_title','$subcat_id','$manifacturer')";
+    $query = "INSERT into products (product_id,product_desc,cat_id,product_img,product_price,product_title,subcat_id,manufacturer_id)
+	VALUES ('$product_id', '$product_desc', '$cat_id', '$product_img','$product_price','$product_title','$subcat_id','$manifacturer')";
+	echo $query ;
     $res = mysqli_query($conn,$query);
 
     if($res){
-       echo "<div class='sucess'>
-             <h3>L'utilisateur a été créée avec succés.</h3>
-             <p>Cliquez <a href='home.php'>ici</a> pour retourner à la page d'accueil</p>
-			 </div>";
+       echo 'produit ajouté  avec succés';
+             //<p>Cliquez <a href='home.php'>ici</a> pour retourner à la page d'accueil</p>
+			 
     }
+	else {
+		echo 'pblm';
+	}
 }
 
 ?>
@@ -63,14 +65,9 @@ if (isset($_REQUEST['product_id'], $_REQUEST['product_desc'], $_REQUEST['cat_id'
 	<input type="text" class="box-input" name="product_price" placeholder="product_price"  >
 	<input type="text" class="box-input" name="product_title" placeholder="product_title"  >
 	<input type="number" class="box-input" name="subcat_id" placeholder="subcat_id"  >
-    <div class="input-group">
-			<select class="box-input" name="manifacturer" id="manifacturer" >
-				<option selected>marque 1 +id</option>
-				<option >marque 2 +id</option>
-				<option >marque n +id</option>
-				//......
-			</select>
-	</div>
+	<input type="number" class="box-input" name="manifacturer" placeholder="cat_id"  >
+
+    
     <input type="submit" name="submit" value="+ Add" class="box-button" />
 </form>
 </body>

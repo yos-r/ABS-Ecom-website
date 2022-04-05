@@ -17,7 +17,7 @@
 		<h1>Bienvenue <?php echo $_SESSION['username']; ?>!</h1>
 		<p>C'est votre espace admin.</p>
 		<a href="view_products.php">View product </a> 
-		<a href="add_produit.php">Add product</a> |
+		<a href="add_product.php">Add product</a> |
 		<a href="update_product_corr.php">Update product </a> 
 		<a href="delete_product.php"> Delete product </a> 
 
