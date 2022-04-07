@@ -57,7 +57,7 @@ if (isset($_POST['submit'])){
 
 ?>
 <form class="box" action="" method="post">
-    <h1 class="box-title">Add user</h1>
+    <h1 class="box-title">Add product</h1>
 	<input type="number" class="box-input" name="product_id" placeholder="product_id" required >
     <input type="textarea" class="box-input" name="product_desc" placeholder="product_desc"  >
 	<input type="number" class="box-input" name="cat_id" placeholder="cat_id"  >
