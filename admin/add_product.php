@@ -26,8 +26,7 @@ if (isset($_POST['submit'])){
 	$product_title = stripslashes($_POST['product_title']);
 	$product_title = mysqli_real_escape_string($conn, $product_title);
 
-	$subcat_id = stripslashes($_POST['subcat_id']);
-	$subcat_id = mysqli_real_escape_string($conn, $subcat_id);
+	
 
 	$manifacturer = stripslashes($_POST['manifacturer']);
 	$manifacturer = mysqli_real_escape_string($conn, $manifacturer);
@@ -40,8 +39,8 @@ if (isset($_POST['submit'])){
 
 
 	
-    $query = "INSERT into products (product_id,product_desc,cat_id,product_img,product_price,product_title,subcat_id,manufacturer_id)
-	VALUES ('$product_id', '$product_desc', '$cat_id', '$product_img','$product_price','$product_title','$subcat_id','$manifacturer')";
+    $query = "INSERT into products (product_id,product_desc,cat_id,product_img,product_price,product_title,manufacturer_id)
+	VALUES ('$product_id', '$product_desc', '$cat_id', '$product_img','$product_price','$product_title','$manifacturer')";
 	echo $query ;
     $res = mysqli_query($conn,$query);
 
@@ -64,7 +63,6 @@ if (isset($_POST['submit'])){
 	<input type="file" class="box-input" name="product_img" placeholder="product_img"  >
 	<input type="text" class="box-input" name="product_price" placeholder="product_price"  >
 	<input type="text" class="box-input" name="product_title" placeholder="product_title"  >
-	<input type="number" class="box-input" name="subcat_id" placeholder="subcat_id"  >
 	<input type="number" class="box-input" name="manifacturer" placeholder="cat_id"  >
 
     

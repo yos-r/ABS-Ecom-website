@@ -5,7 +5,7 @@ $product_title=$_GET['product_title'];
 $product_img=$_GET['product_img'];
 $product_price=$_GET['product_price'];
 $product_cat=$_GET['product_cat'];
-$product_subcat=$_GET['product_subcat'];  
+//$product_subcat=$_GET['product_subcat'];  
 $product_desc=$_GET['product_desc'];
 $product_manif=$_GET['product_manif']; 
 ?>
@@ -43,10 +43,6 @@ $product_manif=$_GET['product_manif'];
                 <td> <input type="number" value="<?php echo $product_cat ?>" name="product_cat"> </td>
             </tr>
             <tr>
-                <td>product_subcat</td>
-                <td> <input type="number" value="<?php echo $product_subcat ?>" name="product_subcat" > </td>
-            </tr>
-            <tr>
                 <td>product_desc</td>
                 <td> <input type="textarea" value="<?php echo $product_desc ?>" name="product_desc"> </td>
             </tr>
@@ -80,11 +76,10 @@ $product_title=$_GET['product_title'];
 $product_img=$_GET['product_img'];
 $product_price=$_GET['product_price'];
 $product_cat=$_GET['product_cat'];
-$product_subcat=$_GET['product_subcat'];
 $product_desc=$_GET['product_desc'];
 $product_manif=$_GET['product_manif'];
 
-$query="UPDATE `products` SET `cat_id`='$product_cat',`subcat_id`='$product_subcat',`manufacturer_id`='$product_manif',`product_title`='$product_title',`product_price`='$product_price',`product_url`='[value-7]',`product_img`='$product_img',`product_desc`='$product_desc' 
+$query="UPDATE `products` SET `cat_id`='$product_cat',`manufacturer_id`='$product_manif',`product_title`='$product_title',`product_price`='$product_price',`product_url`='[value-7]',`product_img`='$product_img',`product_desc`='$product_desc' 
 WHERE product_id='$product_id'"; 
 $data=mysqli_query($conn,$query);
 echo $query;
