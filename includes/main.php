@@ -1,6 +1,6 @@
 <!-- header qui inclut la barre de navigation, le logo du panier, la barre de recherche -->
-<body>
-    <header>
+<body>    
+<header>
         <nav class="navbar navbar-expand-md navbar-dark">
             <div class="logo-area">
                 <a href="#" class="logo"><span>A</span>BS</a><!--on doit placer le logo-->
@@ -10,11 +10,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
                 <ul class="navbar-nav">
-                    <li><a href="#banniere">Accueil</a></li>
-                    <li><a href="#apropos">Apropos</a></li>
-                    <li><a href="#produits">Produits</a></li>
-                    <li><a href="#temoignage">Temoignage</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="./index.php/#banniere">Accueil</a></li>
+                    <li><a href="./index.php/#apropos">Apropos</a></li>
+                    <li><a href="./index.php#produits">Produits</a></li>
+                    <li><a href="./index.php#temoignage">Temoignage</a></li>
+                    <li><a href="./index.php#contact">Contact</a></li>
                     <?php
                         if(!isset($_SESSION['customer_email'])){
                         echo '<li><a href="customer_register.php">Register</a></li>';

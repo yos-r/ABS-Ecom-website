@@ -7,15 +7,13 @@
     scroll-behavior: smooth;/*smooth	Allows a smooth animated "scroll effect" between elements within the scrolling box.*/
 }
 
-
 p{
     font-weight: 300 px;
     color: #fff;
 }
 /*CSS nav***/
-
-header{    
-    position: fixed;
+header{ 
+    position: sticky;   
     top: 0%;
     left: 0%;
     padding: 20px 10px;
@@ -465,6 +463,36 @@ section{
     right: 15px;
 }
 
+/*cart*/
+#content {
+    width: 100%;
+    margin-top: 50px;
+}
+#content .box-footer .btn{
+    background: #fb911f;
+}
+
+/*end cart*/
+
+/*footer*/
+footer{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    background: #000;
+}
+footer .social-media{
+    position: absolute;
+    right: 0;
+    margin-right:20px;
+}
+footer .social-media .fa-brands{
+    color: #fb911f;
+}
+/*end footer*/
  
 @media all and (max-width:820px)  {
 header, 
@@ -589,6 +617,13 @@ text-align: center;
     }
     .logo-area{
         margin: 0;
+    }
+    footer{
+        flex-direction: column;
+    }
+        
+    footer .social-media{
+        position: static;
     }
     
 }
