@@ -44,13 +44,7 @@
         <form action="" method="post" >
             <div class="form-group"><!-- form-group Starts -->
                 <label >Quantité </label>
-                <select name="product_qty" class="form-control" >
-                <option>Select quantity</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <input name="product_qty" type="number" >
             </select>   
             </div>
             <p class="text-center buttons" ><!-- text-center buttons Starts -->
@@ -83,7 +77,7 @@
             $run_price = mysqli_query($con,$get_price);
             $row_price = mysqli_fetch_array($run_price);
             $pro_price = $row_price['product_price'];
-            $query = "insert into cart (p_id,ip_add,qty,p_price) values ('$p_id','$ip_add','$product_qty','$product_price')";
+            $query = "insert into cart (p_id,ip_add,qty,p_price) values ('$p_id','$ip_add','$product_qty','$pro_price')";
             $run_query = mysqli_query($db,$query);
             echo "<script>window.open('$pro_url','_self')</script>";
         }

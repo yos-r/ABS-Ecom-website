@@ -17,7 +17,7 @@ include("includes/main.php"); //header
                 $run_cart = mysqli_query($con,$select_cart);
                 $count = mysqli_num_rows($run_cart);
             ?>
-            <p class="text-muted" > Vous avez <?php echo $count; ?>éléments dans votre panier </p>
+            <p class="text-muted" > Vous avez <?php echo $count; ?> éléments dans votre panier </p>
             <div class="table-responsive" >
                 <table class="table" >
                     <thead>
@@ -46,7 +46,7 @@ include("includes/main.php"); //header
                             $total += $sub_total;
                     ?>
                     <tr>
-                        <td><img src="images/<?php echo $product_img; ?>" ></td>
+                        <td><img style="width: 40px;"src="images/products/<?php echo $product_img; ?>" ></td>
                         <td><a href="#" > <?php echo $product_title; ?> </a></td>
                         <td><input type="text" name="quantity" value="<?php echo $_SESSION['pro_qty']; ?>" data-product_id="<?php echo $pro_id; ?>" class="quantity form-control"></td>
                         <td> <?php echo $only_price; ?>.00 D.T.</td>
@@ -98,11 +98,10 @@ echo @$up_cart = update_cart();
 
 </div><!-- container Ends -->
 </div><!-- content Ends -->
-<?php include("includes/footer.php"); ?>
-<script src="js/jquery.min.js"> </script>
-<script src="js/bootstrap.min.js"></script>
-<script>
+<?php //include("includes/footer.php"); ?>
 
+<!-- script de modification de la quantité -->
+<script>
   $(document).ready(function(data){
       $(document).on('keyup', '.quantity', function(){
           var id = $(this).data("product_id");

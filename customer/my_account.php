@@ -23,7 +23,7 @@ else {
       <?php include("requires/sidebar.php"); ?>
     </div>
 
-    <div class="col-md-9" >
+    <div class="col-md-9" > <!-- y inclure la fonctionnalité choisie -->
       <div class="box" >
         <?php
             if(isset($_GET['my_orders'])){
@@ -38,7 +38,38 @@ else {
             if(isset($_GET['delete_account'])){
                 include("delete_account.php");
             }
-        ?>
+            if(isset($_GET['commande'])){
+              $commande=@$_GET['commande'];
+              ?>
+              <h3> Facture <?php echo $commande;?> </h3>
+              <div class="table-responsive" >
+                <table class="table table-bordered table-hover">
+                  <thead>
+                      <tr>
+                          <th>Produit</th>
+                          <th>Qty</th>
+                          <th>Sous-total</th>
+                      </tr>
+                  </thead>
+                  <?php 
+                      $get_order = "select * from customer_orders where invoice_no='$commande'";
+                      $run_order = mysqli_query($con,$get_order);
+                      while($row_order = mysqli_fetch_array($run_order)){
+                          $pro_id = $row_order['product_id'];
+                          $pro_qty = $row_order['qty'];
+                          $pro_subtotal=$row_order['subtotal'];
+                          ?>
+                          <tr>
+                          <th><?php echo $pro_id; ?></th>
+                          <td><?php echo $pro_qty; ?></td>
+                          <td><?php echo $pro_subtotal; ?></td>
+                      </tr>
+                      <?php } ?>
+                  <tbody>
+                  </table>
+                </div>
+          <?php } ?>
+        
       </div>
     </div>
 
@@ -46,5 +77,4 @@ else {
 </div>
 
 <?php include("requires/footer.php");?>
-<script src="js/jquery.min.js"> </script>
 <?php }?>

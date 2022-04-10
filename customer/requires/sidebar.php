@@ -9,7 +9,7 @@
             if(!isset($_SESSION['customer_email'])){
             }
             else {
-                echo " <h3 align='center' class='panel-title'> Name : $customer_name </h3>";
+                echo " <h3 align='center' class='panel-title'> Salut $customer_name </h3>";
             }
         ?>
     </div>

@@ -1,6 +1,8 @@
+<!-- script php appelé par ajax pour permettre la modification de la quantité des produits dans
+le panier -->
 <?php
     session_start();
-    include("includes/connections.php");
+    include("includes/connection.php");
     include("includes/functions.php");
 ?>
 <?php
