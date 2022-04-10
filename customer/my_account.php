@@ -15,12 +15,12 @@ else {
       <?php
           $c_email = $_SESSION['customer_email'];
           $get_customer = "select * from customers where customer_email='$c_email'";
-          $run_customer = mysqli_query($conn,$get_customer);
+          $run_customer = mysqli_query($con,$get_customer);
           $row_customer = mysqli_fetch_array($run_customer);
           $c_name = $row_customer['customer_name']; ?>
 
     <div class="col-md-3"><!-- the thingy that includes the sidebar Starts -->
-      <?php include("includes/sidebar.php"); ?>
+      <?php include("requires/sidebar.php"); ?>
     </div>
 
     <div class="col-md-9" >
