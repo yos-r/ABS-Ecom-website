@@ -41,7 +41,7 @@ session_start();
 </div>
 </div>
 </div>
-
+<?php require("includes/footer.php") ?>
 <?php
 
 if(isset($_POST['register'])){

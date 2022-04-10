@@ -10,8 +10,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
                 <ul class="navbar-nav">
-                    <li><a href="./index.php/#banniere">Accueil</a></li>
-                    <li><a href="./index.php/#apropos">Apropos</a></li>
+                    <li><a href="./index.php#banniere">Accueil</a></li>
+                    <li><a href="./index.php#apropos">Apropos</a></li>
                     <li><a href="./index.php#produits">Produits</a></li>
                     <li><a href="./index.php#temoignage">Temoignage</a></li>
                     <li><a href="./index.php#contact">Contact</a></li>

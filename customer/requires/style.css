@@ -549,7 +549,7 @@ text-align: center;
 } 
 /**** CSS FOOTER*****/
 footer{    
-    position: relative;
+    position: absolute;
     bottom: 0;
     left: 0;
     padding: 20px 20px;
@@ -566,7 +566,7 @@ div.social-media a{
     margin-left: 15px;
 }
 div.social-media i{
-    color: #fff;
+    color: orangered;
 
 }
 
