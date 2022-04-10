@@ -15,7 +15,7 @@ p{
 /*CSS nav***/
 
 header{    
-    position: fixed;
+    position: sticky;
     top: 0%;
     left: 0%;
     padding: 20px 10px;
@@ -547,6 +547,35 @@ text-align: center;
     }
     
 } 
+/**** CSS FOOTER*****/
+footer{    
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 20px 20px;
+    width: 100%;
+    z-index: 1;/*z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display:flex elements).*/
+    display: flex;
+    background-color:rgb(0, 0, 0);
+}
+div.social-media{
+    margin-left: 55%;
+    display: flex;
+} 
+div.social-media a{
+    margin-left: 15px;
+}
+div.social-media i{
+    color: #fff;
+
+}
+
+#contactez{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 4px;
+    margin-left: 10px;
+}
 
 @media all and (min-width: 300px) and (max-width: 767px)
 {
@@ -592,3 +621,5 @@ text-align: center;
     }
     
 }
+
+
