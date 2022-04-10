@@ -10,7 +10,8 @@ include("includes/main.php"); //header
     <div class="col-md-12" ><!-- col-md-12 Starts -->
         <?php
         if(!isset($_SESSION['customer_email'])){
-            include("customer/customer_login.php");
+            //include("customer/customer_login.php");
+            echo "<script>window.open('customer/customer_login.php','_self')</script>";
         }
          else{ include("confirmer.php"); }
         ?>
