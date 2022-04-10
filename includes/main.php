@@ -40,12 +40,21 @@
                         </a>
                     </li>
                 </ul>
+                <!-- 
                 <div class="search-container">
-                    <form action="/search" method="get">
+                    <form action="search" >
                         <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
                         <label class="button searchbutton" for="searchright"><i class="fas fa-search"></i></label>
                     </form>
-                </div>
-            </div>
+                    <div class="result" style="position: absolute;z-index: 999;top: 100%;left: 0;">
+                    </div>
+                </div> -->
+                <form class="search-box" method="get" action="search.php"> 
+                    <input type="text" autocomplete="off" placeholder="Chercher produit..." name="searchterm" />
+                    <button type="submit" name="search"> Chercher </button>
+                    <div class="result" style="width: 100%;box-sizing: border-box;"></div>
+                </form>
+                
+                
         </nav> 
 </header>
