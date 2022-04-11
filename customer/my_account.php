@@ -56,11 +56,15 @@ else {
                       $run_order = mysqli_query($con,$get_order);
                       while($row_order = mysqli_fetch_array($run_order)){
                           $pro_id = $row_order['product_id'];
+                          $get_product_name="select * from products where product_id='$pro_id'";
+                          $run_product_name=mysqli_query($con,$get_product_name);
+                          $row_product_name=mysqli_fetch_array($run_product_name);
+                          $product_name=$row_product_name['product_title'];
                           $pro_qty = $row_order['qty'];
                           $pro_subtotal=$row_order['subtotal'];
                           ?>
                           <tr>
-                          <th><?php echo $pro_id; ?></th>
+                          <th><?php echo $product_name; ?></th>
                           <td><?php echo $pro_qty; ?></td>
                           <td><?php echo $pro_subtotal; ?></td>
                       </tr>
