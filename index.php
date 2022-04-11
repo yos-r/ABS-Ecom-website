@@ -57,13 +57,13 @@ require_once("includes/main.php");
     <!-- The slideshow/carousel -->
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="images/product/FM-2000-WHITE.png" alt="FM-2000-WHITE" class="d-block w-100">
+        <img src="images/products/FM-2000-WHITE.png" alt="FM-2000-WHITE" class="d-block w-100">
       </div>
       <div class="carousel-item">
-        <img src="images/product/SOL-DC-1-min.png" alt="SOL-DC-1-min" class="d-block w-100">
+        <img src="images/products/SOL-DC-1-min.png" alt="SOL-DC-1-min" class="d-block w-100">
       </div>
       <div class="carousel-item">
-        <img src="images/product/vox-600-rouge.png" alt="vox-600-rouge" class="d-block w-100">
+        <img src="images/products/vox-600-rouge.png" alt="vox-600-rouge" class="d-block w-100">
       </div>
     </div>
   
