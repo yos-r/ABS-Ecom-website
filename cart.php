@@ -17,7 +17,7 @@ include("includes/main.php"); //header
                 $run_cart = mysqli_query($con,$select_cart);
                 $count = mysqli_num_rows($run_cart);
             ?>
-            <p class="text-muted" > Vous avez <?php echo $count; ?>éléments dans votre panier </p>
+            <p class="text-muted" > Vous avez <?php echo $count; ?> éléments dans votre panier </p>
             <div class="table-responsive" >
                 <table class="table" >
                     <thead>
@@ -99,10 +99,9 @@ echo @$up_cart = update_cart();
 </div><!-- container Ends -->
 </div><!-- content Ends -->
 <?php //include("includes/footer.php"); ?>
-<script src="js/jquery.min.js"> </script>
-<script src="js/bootstrap.min.js"></script>
-<script>
 
+<!-- script de modification de la quantité -->
+<script>
   $(document).ready(function(data){
       $(document).on('keyup', '.quantity', function(){
           var id = $(this).data("product_id");
