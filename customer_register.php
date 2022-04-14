@@ -43,20 +43,24 @@ session_start();
 </div>
 <?php require("includes/footer.php") ?>
 <?php
-
 if(isset($_POST['register'])){
+    $c_id=mt_rand();
     $c_name = $_POST['c_name'];
     $c_email = $_POST['c_email'];
     $c_pass = $_POST['c_pass'];
     $c_address=$_POST['c_address'];
+
     $c_ip = getRealUserIp();
+
     $get_email = "select * from customers where customer_email='$c_email'";
     $run_email = mysqli_query($con,$get_email);
     $check_email = mysqli_num_rows($run_email);
     if($check_email == 1){
         echo "<script>alert('cet email existe déja')</script>";
-    exit();
-    $insert_customer = "insert into customers (customer_name,customer_email,customer_pass,customer_address) values ('$c_name','$c_email','$c_pass','$c_address')";
+        exit();
+    }
+    else{
+    $insert_customer = "insert into customers(customer_id,customer_name,customer_email,customer_pass,customer_address) values(  $c_id,'$c_name','$c_email','$c_pass','$c_address')";
     $run_customer = mysqli_query($con,$insert_customer);
     $sel_cart = "select * from cart where ip_add='$c_ip'";
     $run_cart = mysqli_query($con,$sel_cart);
@@ -71,7 +75,7 @@ if(isset($_POST['register'])){
         echo "<script>alert('Vous êtes inscrit(e)!!')</script>";
         echo "<script>window.open('index.php','_self')</script>";
       }
-    
+
     }
 }
 ?>
