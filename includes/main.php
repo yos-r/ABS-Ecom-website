@@ -3,14 +3,13 @@
 <header>
         <nav class="navbar navbar-expand-md navbar-dark">
             <div class="logo-area">
-                <a href="#" class="logo"><span>A</span>BS</a><!--on doit placer le logo-->
+                <a href="./index.php#banniere" class="logo"><span>A</span>BS</a><!--on doit placer le logo-->
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
                 <ul class="navbar-nav">
-                    <li><a href="./index.php#banniere">Accueil</a></li>
                     <li><a href="./index.php#apropos">Apropos</a></li>
                     <li><a href="./index.php#produits">Produits</a></li>
                     <li><a href="./index.php#temoignage">Temoignage</a></li>
@@ -49,12 +48,12 @@
                     <div class="result" style="position: absolute;z-index: 999;top: 100%;left: 0;">
                     </div>
                 </div> -->
-                <form class="search-box" method="get" action="search.php"> 
-                    <input type="text" autocomplete="off" placeholder="Chercher produit..." name="searchterm" />
-                    <button type="submit" name="search"> Chercher </button>
-                    <div class="result" style="width: 100%;box-sizing: border-box;"></div>
-                </form>
-                
-                
         </nav> 
+        <div class="search-box">
+            <form method="get" class="search-form" action="search.php"> 
+                <input type="text" autocomplete="off" placeholder="Chercher produit..." name="searchterm" />
+                <button type="submit" name="search">chercher</button>
+                <div class="result" style="width: 100%;box-sizing: border-box;"></div>
+            </form>
+        </div>
 </header>

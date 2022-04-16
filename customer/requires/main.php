@@ -1,36 +1,35 @@
 <!-- header qui inclut la barre de navigation, le logo du panier, la barre de recherche -->
-<body>
-    <header>
+<body>    
+<header>
         <nav class="navbar navbar-expand-md navbar-dark">
             <div class="logo-area">
-                <a href="#" class="logo"><span>A</span>BS</a><!--on doit placer le logo-->
+                <a href="../index.php#banniere" class="logo"><span>A</span>BS</a><!--on doit placer le logo-->
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
                 <ul class="navbar-nav">
-                    <li><a href="../index.php#banniere">Accueil</a></li>
                     <li><a href="../index.php#apropos">Apropos</a></li>
                     <li><a href="../index.php#produits">Produits</a></li>
                     <li><a href="../index.php#temoignage">Temoignage</a></li>
                     <li><a href="../index.php#contact">Contact</a></li>
                     <?php
                         if(!isset($_SESSION['customer_email'])){
-                        echo '<li><a href="../customer_register.php">Register</a></li>';
+                        echo '<li><a href="customer_register.php">Register</a></li>';
                         } 
                         else
                         { 
-                            echo '<li><a href="my_account.php?my_orders">Account</a></li>';
+                            echo '<li><a href="customer/my_account.php?my_orders">Account</a></li>';
                         }   
                     ?> 
                     <?php
                         if(!isset($_SESSION['customer_email'])){
-                        echo '<li><a href="customer_login.php">Login</a></li>'; //checkout.php!!
+                        echo '<li><a href="customer/customer_login.php">Login</a></li>'; //checkout.php!!
                         } 
                         else
                         { 
-                            echo '<li><a href="logout.php" ">Logout</a></li>';
+                            echo '<li><a href="customer/logout.php" ">Logout</a></li>';
                         }   
                     ?> 
                     <li><a id="cart" href="../cart.php">
@@ -40,12 +39,12 @@
                         </a>
                     </li>
                 </ul>
-                <div class="search-container">
-                    <form action="/search" method="get">
-                        <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
-                        <label class="button searchbutton" for="searchright"><i class="fas fa-search"></i></label>
-                    </form>
-                </div>
-            </div>
         </nav> 
+        <div class="search-box">
+            <form method="get" class="search-form" action="search.php"> 
+                <input type="text" autocomplete="off" placeholder="Chercher produit..." name="searchterm" />
+                <button type="submit" name="search">chercher</button>
+                <div class="result" style="width: 100%;box-sizing: border-box;"></div>
+            </form>
+        </div>
 </header>
