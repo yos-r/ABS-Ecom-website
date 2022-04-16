@@ -1,4 +1,4 @@
-<div class="panel panel-default sidebar-menu"><!-- panel panel-default sidebar-menu Starts -->
+<div id="panel" class="panel panel-default sidebar-menu"><!-- panel panel-default sidebar-menu Starts -->
     <div class="panel-heading"><!-- panel-heading Starts -->
         <?php
             $customer_session = $_SESSION['customer_email'];
@@ -9,12 +9,15 @@
             if(!isset($_SESSION['customer_email'])){
             }
             else {
-                echo " <h3 align='center' class='panel-title'> Salut $customer_name </h3>";
+                echo " <h3 align='center' class='panel-title'> Salut $customer_name </h3>
+                <button class='openbtn' onclick='openNav()'>☰</button> ";
             }
         ?>
+        
     </div>
-
-    <div class="panel-body"><!-- panel-body Starts -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <div class="panel-body"><!-- panel-body Starts -->
         <ul class="nav nav-pills nav-stacked"><!-- nav nav-pills nav-stacked Starts -->
             <li class="<?php if(isset($_GET['my_orders'])){ echo "active"; } ?>">
                 <a href="my_account.php?my_orders"> <i class="fa fa-list"> </i> My Orders </a>
@@ -34,4 +37,17 @@
             </li>
         </ul>
     </div><!-- panel-body Ends -->
+    </div> 
 </div>
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "350px";
+  document.getElementsByClassName("panel-heading").style.display="none";
+  document.getElementById("panel").style.marginLeft = "350px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("panel").style.marginLeft= "0";
+}
+</script>

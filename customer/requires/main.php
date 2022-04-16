@@ -16,7 +16,7 @@
                     <li><a href="../index.php#contact">Contact</a></li>
                     <?php
                         if(!isset($_SESSION['customer_email'])){
-                        echo '<li><a href="customer_register.php">Register</a></li>';
+                        echo '<li><a href="../customer_register.php">Register</a></li>';
                         } 
                         else
                         { 

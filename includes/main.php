@@ -39,15 +39,6 @@
                         </a>
                     </li>
                 </ul>
-                <!-- 
-                <div class="search-container">
-                    <form action="search" >
-                        <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
-                        <label class="button searchbutton" for="searchright"><i class="fas fa-search"></i></label>
-                    </form>
-                    <div class="result" style="position: absolute;z-index: 999;top: 100%;left: 0;">
-                    </div>
-                </div> -->
         </nav> 
         <div class="search-box">
             <form method="get" class="search-form" action="search.php"> 
