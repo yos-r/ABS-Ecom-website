@@ -549,7 +549,7 @@ text-align: center;
 } 
 /**** CSS FOOTER*****/
 footer{    
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     padding: 20px 20px;
