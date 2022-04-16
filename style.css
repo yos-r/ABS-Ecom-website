@@ -75,7 +75,7 @@ header .navbar li a:hover{
     width: 100%;
 }
 .search-box form{
-    width: 100%;
+    width: 90%;
     margin: 10px 40px;
 }
 
@@ -464,89 +464,63 @@ footer .social-media .fa-brands{
 }
 /*end footer*/
  
-@media all and (max-width:820px)  {
-header, 
-header.sticky{
-    padding: 10px 20px;
-}
-
-header .navbar li{
-    margin-left: 0px;
-}
-
-header .navbar li a {
-    text-decoration: none;
-    color: #fff;
-}
-
-section{
-    padding: 20px;
-}
-
-header .navbar.active{
-    width: 100%;
-    height: calc(100% -68px);
-    position: fixed;
-    top: 68px;
-    left:0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background: #ffff;
-    align-items: center;
-}
-
-.banniere .contenu h2{
-    font-size: 2em;
-}
-
-.row .col50 img{
+/*panel*/
+.panel{
     width:100%;
 }
+/*panel end*/
+/*sidebar*/
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #fb911f;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #333;
+    margin: 0 20px;
+    border: none;
+  }
+  
 
-.contenu p:nth-child(2){
-    font-size: 1.2em;
-}
-.expert{
-    margin-top: 0px;
-}
+  #panel{
+    transition: margin-left .5s;
+    padding: 16px;
+  }  
+/*end sidebar*/
 
-.menu{
-    margin-top: 0px;
-}
-
-.row{
-    display: flex;
-    flex-direction: column;
-}
-
-
-
-.temoignage h2{
-    font-size: 2em;
-    text-align: center;
-}
-
-.temoignage p{
-text-align: center;
-}
-
-    .row .col50 {
-        position: relative;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 30px;
-    
-    }
-
-    .row{
-        flex-direction: column;
-    }
-    
-} 
-
-@media all and (min-width: 300px) and (max-width: 820px)
+@media all and (min-width: 360px) and (max-width: 767px)
 {
     .banniere .contenu h2{
         font-size: 2.2em;
@@ -597,11 +571,14 @@ text-align: center;
     }
 
     .search-box form{
-        width: 100%;
-        margin: 10px 0px;
+        width: 90%;
     }
     .search-box input[type='text']{
-        min-width:50px;
+        min-width:90%;
+    }
+    .search-box button[type='submit']{
+        min-width:90%;
     }
     
 }
+
