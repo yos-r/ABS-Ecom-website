@@ -31,7 +31,7 @@ session_start();
 </form>
 
 <center>
-    <a href="../customer_register.php"><h3>s'inscrire ici</h3></a>
+    <a id="inscrire" href="../customer_register.php"><h4>s'inscrire ici</h4></a>
 </center>
 </div>
 

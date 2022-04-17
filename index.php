@@ -19,17 +19,9 @@ require_once("includes/main.php");
    <div class="row">
         <div class="col50">
             <h2 class="titre-texte"><span>A</span> Propos De Nous</h2>
-            <p>
-               * presentation de l entreprise <br> 
-               * brands <br>
-               * suivez_nous:les reseaux sociaux(insta facebook gmail tiktok ...) <br>
-               *politique de l organisation (forme juridique) <br>
-               *politique de confidentialite ( apropos les donnees du client)<br>
-               *condition d utilisation(creation du compte) <br>
-               *livraison et retour (les etapes necessiares pour passer une commande <br>
-               *mode de paimement (carte bancaire) <br>
-               *bare de navigation <br>
-            </p>
+               <h3>Nous somme une société Tunisienne spécialisée dans la vente de tous les solutions de construction</h3> 
+               <br>
+               <h3>Nous portons les produits de: *insert brand with php*</h3>
         </div>
        <div id="img-apropos" class="col50">
             <div class="img">

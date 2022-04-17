@@ -23,7 +23,7 @@ header{
     padding: 20px 10px;
     width: 100%;
     display: block;
-    z-index: 1;/*z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display:flex elements).*/
+    z-index: 2;/*z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display:flex elements). */
     background-color:rgb(0, 0, 0);
 }
 
@@ -64,7 +64,6 @@ header{
 }
 header .navbar li a:hover{
     color: #fb911f;
-    border-bottom: 2px solid #fb911f;/*remarque:If border-bottom-color is omitted, the color applied will be the color of the text.*/
 
 }
 #cart:hover{
@@ -178,6 +177,10 @@ section{
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+.col50 h3{
+    color: #fff;
+    font-weight: lighter;
 }
 
 .row .col50{
@@ -395,12 +398,16 @@ header.sticky li a:hover{
   }
 
 .carousel-item {
-    height: 420px;
+
     margin-bottom: 40px;
 }
-
 .carousel-item img{
     object-fit: contain;
+}
+.carousel-control-prev,.carousel-control-next,
+.carousel-indicators
+{
+    z-index: 1;
 }
 
 section{
@@ -468,13 +475,16 @@ footer .social-media .fa-brands{
 .panel{
     width:100%;
 }
+.panel-heading{
+    display: flex;
+}
 /*panel end*/
 /*sidebar*/
 .sidebar {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
     background-color: #000;
@@ -506,6 +516,8 @@ footer .social-media .fa-brands{
   
   .openbtn {
     font-size: 20px;
+    position: relative;
+    bottom: 5px;
     cursor: pointer;
     background-color: transparent;
     color: #333;
@@ -520,8 +532,64 @@ footer .social-media .fa-brands{
   }  
 /*end sidebar*/
 
+.btn-primary{
+    margin: 20px 0px 10px;
+    padding: 5px 10px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #fb911f;
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.btn-primary:hover,.btn-danger:hover
+,.btn-primary:active,.btn-danger:active,
+.btn-primary:focus,.btn-danger:focus
+{
+    background-color: #333;
+}
+.btn-danger{
+    margin-top: 20px;
+    padding: 5px 10px;
+    font-size: 1em;
+    color: #fff;
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+#inscrire{
+    color: #333;
+}
 @media all and (min-width: 360px) and (max-width: 767px)
 {
+    #banniere{
+        padding:0;
+    }
+    .btn2{
+        margin-left: 0;
+    }
+    #apropos{
+        padding:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .row .col50{
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .row{
+        flex-direction: column;
+    }
     .banniere .contenu h2{
         font-size: 2.2em;
         color: #fff;
@@ -539,25 +607,6 @@ footer .social-media .fa-brands{
 
     .temoignage p{
         text-align: center;
-    }
-    .expandright {
-        left: 49px;
-        right: auto; 
-    }
-    
-    .expandright:focus {
-        padding: 0 0 0 16px;
-    }
-    .search, .search:focus{
-        margin-top: 10px;
-        height: 30px;
-        width: 240px; 
-        padding: 0  0 0 16px; 
-    }
-
-    .searchbutton{
-        background: none;
-        color: #fff;
     }
     .logo-area{
         margin: 0;

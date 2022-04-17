@@ -19,7 +19,7 @@ else {
           $row_customer = mysqli_fetch_array($run_customer);
           $c_name = $row_customer['customer_name']; ?>
 
-    <div class="col-md-3"><!-- the thingy that includes the sidebar Starts -->
+    <div class="col-md-4"><!-- the thingy that includes the sidebar Starts -->
       <?php include("requires/sidebar.php"); ?>
     </div>
 
