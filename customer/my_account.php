@@ -64,7 +64,7 @@ else {
                           $pro_subtotal=$row_order['subtotal'];
                           ?>
                           <tr>
-                          <th><?php echo $product_name; ?></th>
+                          <th><?php echo $pro_id; ?></th>
                           <td><?php echo $pro_qty; ?></td>
                           <td><?php echo $pro_subtotal; ?></td>
                       </tr>

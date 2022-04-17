@@ -47,11 +47,11 @@
                 </a>    
                 <div class="text">
                     <!-- image de la marque -->
-                        <center>
+                        <marquee>
                             <a href="marques.php?man_id=<?php $product_manufacturer_id?>" >
                                 <img src="images/manufacturers/<?php echo$product_manufacturer_img?>"  >
                             </a>
-                        </center>
+                        </marquee>
                     <!-- titre du produit-->
                         <h3><a href='<?php echo $product_url ?>' > <?php $product_title ?> </a></h3>
                     <!-- prix du produit -->

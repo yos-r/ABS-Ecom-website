@@ -1,4 +1,8 @@
 
+@font-face{
+    font-family:'poppins';
+    src: url('./fonts/Poppins-Regular.ttf');
+}
 *{
     margin: 0px;
     padding: 0px;
@@ -18,8 +22,8 @@ header{
     left: 0%;
     padding: 20px 10px;
     width: 100%;
+    display: block;
     z-index: 1;/*z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display:flex elements).*/
-    display: flex;
     background-color:rgb(0, 0, 0);
 }
 
@@ -28,7 +32,7 @@ header{
     display: flex;
     margin: auto;
 }
-.logo{
+.logo,.logo:hover{
     color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 2em;
@@ -66,94 +70,45 @@ header .navbar li a:hover{
 #cart:hover{
     border-bottom: none;
 }
-/*search*/
-.button {
-	display: inline-block;
-	margin: 4px 2px;
-	background-color: #2f3640;
-	font-size: 14px;
-	padding-left: 32px;
-	padding-right: 32px;
-	height: 50px;
-	line-height: 50px;
-	text-align: center;
-	color: white;
-	text-decoration: none;
-	cursor: pointer;
-	-moz-user-select: none;
-	-khtml-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+/*sreach box for active search*/
+.search-box{
+    width: 100%;
+}
+.search-box form{
+    width: 90%;
+    margin: 10px 40px;
 }
 
-.button:hover {
-	transition-duration: 0.4s;
-	-moz-transition-duration: 0.4s;
-	-webkit-transition-duration: 0.4s;
-	-o-transition-duration: 0.4s;
+.search-box input[type="text"]{
+    padding: 5px 10px;
+    min-width:75%;
+    border: none;
+    
 }
-
-.search-container {
-	position: relative;
-	display: inline-block;
-	margin: 4px 2px;
-    margin-left: 20px;
-	height: 50px;
-	width: 50px;
-    border-radius: 40px;
-	vertical-align: bottom;
-}
-
-.searchbutton {
-	position: absolute;
-	font-size: 22px;
-    border-radius: 40px;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-.search:focus + .searchbutton {
-	transition-duration: 0.4s;
-	-moz-transition-duration: 0.4s;
-	-webkit-transition-duration: 0.4s;
-	-o-transition-duration: 0.4s;
-    background: none;
+.search-box button[type='submit']{
+    padding: 5px 10px;
+    font-size: 1em;
     color: #fff;
+    background: #fb911f;
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
 }
-
-.search {
-	position: absolute;
-	left: 49px; /*Button width-1px (Not 50px/100% because that will sometimes show a 1px line between the search box and button)  */
-	background: white ;
-	outline: none;
-	border: none;
-    border-radius: 40px;
-	padding: 0;
-	width: 0;
-	height: 100%;
-	z-index: 10;
-	transition-duration: 0.4s;
-	-moz-transition-duration: 0.4s;
-	-webkit-transition-duration: 0.4s;
-	-o-transition-duration: 0.4s;
-}
-
-.search:focus {
-	width: 420px; 
-	padding: 0 16px 0 0;
-}
-
-.expandright {
-	left: auto;
-	right: 49px; 
-}
-
-.expandright:focus {
-	padding: 0 0 0 16px;
-}
-/*end search*/
+    /*result*/
+    .result section{
+        min-width: 100%;
+        display: flex;
+        background-color: transparent;
+    }
+    .result .dropdown-result{
+        text-decoration: none;
+        color: #fff;
+    }  
+    /*end result*/
+/*end active search*/
 
 /*fin css navbar**/
 
@@ -468,10 +423,25 @@ section{
     width: 100%;
     margin-top: 50px;
 }
-#content .box-footer .btn{
+#content .box-footer .btn-info,
+#content .box-footer .btn-success{
     background: #fb911f;
+    border: #fb911f;
 }
-
+#content .box-footer .btn-info:hover,
+#content .box-footer .btn-success:active{
+    box-shadow: none;
+}
+#content .box-footer .btn-default:hover{
+    color: #fb911f;
+}
+#content tbody td a{
+    color:#000;
+    text-decoration: none;
+}
+#content tbody td a:hover{
+    color: #fb911f;
+}
 /*end cart*/
 
 /*footer*/
@@ -494,89 +464,63 @@ footer .social-media .fa-brands{
 }
 /*end footer*/
  
-@media all and (max-width:820px)  {
-header, 
-header.sticky{
-    padding: 10px 20px;
-}
-
-header .navbar li{
-    margin-left: 0px;
-}
-
-header .navbar li a {
-    text-decoration: none;
-    color: #fff;
-}
-
-section{
-    padding: 20px;
-}
-
-header .navbar.active{
-    width: 100%;
-    height: calc(100% -68px);
-    position: fixed;
-    top: 68px;
-    left:0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background: #ffff;
-    align-items: center;
-}
-
-.banniere .contenu h2{
-    font-size: 2em;
-}
-
-.row .col50 img{
+/*panel*/
+.panel{
     width:100%;
 }
+/*panel end*/
+/*sidebar*/
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #fb911f;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #333;
+    margin: 0 20px;
+    border: none;
+  }
+  
 
-.contenu p:nth-child(2){
-    font-size: 1.2em;
-}
-.expert{
-    margin-top: 0px;
-}
+  #panel{
+    transition: margin-left .5s;
+    padding: 16px;
+  }  
+/*end sidebar*/
 
-.menu{
-    margin-top: 0px;
-}
-
-.row{
-    display: flex;
-    flex-direction: column;
-}
-
-
-
-.temoignage h2{
-    font-size: 2em;
-    text-align: center;
-}
-
-.temoignage p{
-text-align: center;
-}
-
-    .row .col50 {
-        position: relative;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 30px;
-    
-    }
-
-    .row{
-        flex-direction: column;
-    }
-    
-} 
-
-@media all and (min-width: 300px) and (max-width: 767px)
+@media all and (min-width: 360px) and (max-width: 767px)
 {
     .banniere .contenu h2{
         font-size: 2.2em;
@@ -625,5 +569,16 @@ text-align: center;
     footer .social-media{
         position: static;
     }
+
+    .search-box form{
+        width: 90%;
+    }
+    .search-box input[type='text']{
+        min-width:90%;
+    }
+    .search-box button[type='submit']{
+        min-width:90%;
+    }
     
 }
+
