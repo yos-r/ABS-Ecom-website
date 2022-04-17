@@ -72,10 +72,11 @@ header .navbar li a:hover{
 /*sreach box for active search*/
 .search-box{
     width: 100%;
+    text-align: center;
 }
 .search-box form{
-    width: 90%;
-    margin: 10px 40px;
+    width: 100%;
+    margin: 10px 0px;
 }
 
 .search-box input[type="text"]{
@@ -618,15 +619,12 @@ footer .social-media .fa-brands{
     footer .social-media{
         position: static;
     }
-
-    .search-box form{
-        width: 90%;
-    }
-    .search-box input[type='text']{
-        min-width:90%;
-    }
     .search-box button[type='submit']{
-        min-width:90%;
+        min-width:100%;
+    }
+    .search-box input[type="text"]{
+        min-width:100%;
+        
     }
     
 }
