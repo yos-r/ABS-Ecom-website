@@ -11,7 +11,7 @@ if(isset($_REQUEST["term"])){
             if(mysqli_num_rows($result) > 0){
                 while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
                     echo "<section>
-                    <a class ='dropdown-result' href='".$row["product_url"]."'><img src='images/products/".$row["product_img"]."' style=' width:100px;'><p>". $row["product_title"] ."</a></p>
+                    <a class ='dropdown-result' href='".$row["product_url"]."'><img src='../images/products/".$row["product_img"]."' style=' width:100px;'><p>". $row["product_title"] ."</a></p>
                     </section>";
                 }
             } else{
