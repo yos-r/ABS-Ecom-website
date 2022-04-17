@@ -68,7 +68,7 @@ require_once("includes/main.php");
     </button>
   </div>
   <div class="plus">
-      <a href="#" class="btn1">Voir Plus</a>
+      <a href="search.php" class="btn1">Voir Plus</a>
   </div>
 </section>
 <!---fin page produits-->
