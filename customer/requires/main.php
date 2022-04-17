@@ -41,7 +41,7 @@
                 </ul>
         </nav> 
         <div class="search-box">
-            <form method="get" class="search-form" action="search.php"> 
+            <form method="get" class="search-form" action="../search.php"> 
                 <input type="text" autocomplete="off" placeholder="Chercher produit..." name="searchterm" />
                 <button type="submit" name="search">chercher</button>
                 <div class="result" style="width: 100%;box-sizing: border-box;"></div>

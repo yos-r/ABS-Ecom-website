@@ -98,7 +98,7 @@ echo @$up_cart = update_cart();
 
 </div><!-- container Ends -->
 </div><!-- content Ends -->
-<?php //include("includes/footer.php"); ?>
+<?php include("includes/footer.php"); ?>
 
 <!-- script de modification de la quantité -->
 <script>
