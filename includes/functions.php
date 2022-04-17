@@ -1,5 +1,5 @@
 <?php
-$db = mysqli_connect("localhost","root","manager","constructionstore");
+$db = mysqli_connect("localhost","root","","constructionstore");
 
 function getRealUserIp(){
     switch(true){

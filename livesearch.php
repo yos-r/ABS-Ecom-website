@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost", "root", "manager", "constructionstore");
+$con = mysqli_connect("localhost", "root", "", "constructionstore");
 if(isset($_REQUEST["term"])){
     $sql = "SELECT * FROM products WHERE product_title LIKE ?";
     if($stmt = mysqli_prepare($con, $sql)){
