@@ -22,7 +22,7 @@
                 $output .= '
                 <div class="col-sm-4 col-lg-3 col-md-3">
                     <div style="border:1px solid #ccc; border-radius:5px; padding:16px; margin-bottom:16px; ">
-                        <img src="images/products/'. $row['product_img'] .'" style="width:200px" alt="" class="img-responsive" >
+                        <img src="images/products/'. $row['product_img'] .'" style="width:200px" class="img-responsive">
                         <p align="center"><strong><a href="#">'. $row['product_title'] .'</a></strong></p>
                         <h4 style="text-align:center;" class="text-danger" >'. $row['product_price'] .'DT </h4>
                     </div>

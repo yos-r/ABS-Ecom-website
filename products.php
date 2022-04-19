@@ -6,6 +6,7 @@ include("includes/functions.php");
 ?>
 <div class="container">
         <div class="row">
+
             <div class="col-md-3"> 
 				<div class="list-group">
                     <br>
@@ -57,21 +58,12 @@ include("includes/functions.php");
 
             <div class="col-md-9">
             	<br/>
-                <div class="row filter_data">
-
-                </div>
+                <div class="row filter_data"></div> <!-- -->
             </div>
         </div>
 
     </div>
-<style>
-#loading
-{
-	text-align:center; 
-	background: url('loader.gif') no-repeat center; 
-	height: 150px;
-}
-</style>
+
 <script>
 $(document).ready(function(){
 
