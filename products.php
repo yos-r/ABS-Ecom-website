@@ -7,8 +7,6 @@ include("includes/functions.php");
 <div class="container">
         <div class="row">
             <div class="col-md-3"> 
-            <input type="hidden" id="hidden_search_term" value="<?php @$_GET['terme'] ?>" />
-               				
 				<div class="list-group">
 					<h3>Prix</h3>
 					<input type="hidden" id="hidden_minimum_price" value="3" />
@@ -60,7 +58,7 @@ include("includes/functions.php");
             </div>
 
             <div class="col-md-9">
-            	<br />
+            	<br/>
                 <div class="row filter_data">
 
                 </div>

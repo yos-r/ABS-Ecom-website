@@ -1,12 +1,12 @@
 <?php
     session_start();
     require_once("includes/connection.php");
-    require_once("includes/main.php");
     require_once("includes/head.php");
+    require_once("includes/main.php");
     require_once("includes/functions.php");
 ?>
+<div class="container">
 <div class="col-md-9">
-    <br />
 <?php 
     if(isset($_GET["search"]))
     {
@@ -24,13 +24,12 @@
                     <div style="border:1px solid #ccc; border-radius:5px; padding:16px; margin-bottom:16px; ">
                         <img src="images/products/'. $row['product_img'] .'" style="width:200px" alt="" class="img-responsive" >
                         <p align="center"><strong><a href="#">'. $row['product_title'] .'</a></strong></p>
-                        <h4 style="text-align:center;" class="text-danger" >'. $row['product_price'] .'</h4>
+                        <h4 style="text-align:center;" class="text-danger" >'. $row['product_price'] .'DT </h4>
                     </div>
                 </div>
                 ';
             }
         }
-        
         else
         {
             $output = '<h3>Pas de produits trouvés</h3>';
@@ -40,6 +39,7 @@
 
 </div>
 </div>
+
 <?php require_once("includes/footer.php"); ?>
 </body>
 </html>
