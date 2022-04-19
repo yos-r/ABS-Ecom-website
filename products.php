@@ -8,21 +8,19 @@ include("includes/functions.php");
         <div class="row">
             <div class="col-md-3"> 
 				<div class="list-group">
+                    <br>
 					<h3>Prix</h3>
 					<input type="hidden" id="hidden_minimum_price" value="3" />
                     <input type="hidden" id="hidden_maximum_price" value="100" />
-                    <p id="price_show">3 - 100</p>
-                    <div id="price_range"></div>
-                </div>				
+                    <p id="price_show" style="color:black">3 - 100</p>
+                    <div id="price_range" style="color:black"></div>
+                    <br>
+                </div>		
                 <div class="list-group">
 					<h3>Catégorie</h3>
                     <div style="height: 180px; overflow-y: auto; overflow-x: hidden;">
 					<?php
-
                     $query = "SELECT cat_id,cat_title FROM categories ";
-                    //$statement = $connect->prepare($query);
-                    //$statement->execute();
-                    //$result = $statement->fetchAll();
                     $runquery=mysqli_query($con,$query);
                     while($row = mysqli_fetch_array($runquery))
                     {
@@ -74,7 +72,6 @@ include("includes/functions.php");
 	height: 150px;
 }
 </style>
-
 <script>
 $(document).ready(function(){
 
@@ -131,6 +128,5 @@ $(document).ready(function(){
 });
 </script>
 <?php include "includes/footer.php" ?>
-
 
 </body>

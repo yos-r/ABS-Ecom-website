@@ -1,9 +1,7 @@
 <?php
 
 //fetch_data.php
-
 include('includes/connection.php');
-
 if(isset($_POST["action"]))
 {
 	$query = "
@@ -35,10 +33,6 @@ if(isset($_POST["action"]))
 		 AND manufacturer_id IN('".$ram_filter."')
 		";
 	}
-	if (isset($_POST["terme"])){
-		$terme=$_POST["terme"];
-		$query.= "AND product_title LIKE '%".$terme."%' ";
-	}
 	
 	$result=mysqli_query($con,$query);
             
@@ -59,7 +53,6 @@ if(isset($_POST["action"]))
 			';
 		}
 	}
-	
 	else
 	{
 		$output = '<h3>Pas de produits trouvés</h3>';

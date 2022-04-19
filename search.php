@@ -32,7 +32,7 @@
         }
         else
         {
-            $output = '<h3>Pas de produits trouvés</h3>';
+            $output = '<br><h3>Pas de produits trouvés</h3>';
         }
         echo $output;
     }?>
