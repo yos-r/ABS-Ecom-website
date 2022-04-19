@@ -64,9 +64,7 @@ include("includes/main.php"); //header
                 </table>
                 
                 <div class="box-footer">
-                    <div class="pull-left">
-                        <a href="index.php" class="btn btn-default"> Continue Shopping </a>
-                    </div>
+                    
                     <div class="pull-right">
                         <button class="btn btn-info" type="submit" name="update" value="Update Cart">
                          Mettre à jour panier
@@ -78,6 +76,7 @@ include("includes/main.php"); //header
             </form><!-- form Ends -->
             </div> <!-- box ends -->
             
+            <br><br><br><br><br><br><br>
 
 <?php
 function update_cart(){
