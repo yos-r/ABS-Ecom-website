@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2022 at 11:57 PM
+-- Generation Time: Apr 19, 2022 at 01:56 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.28
 
@@ -53,6 +53,17 @@ CREATE TABLE `cart` (
   `qty` int(11) NOT NULL,
   `p_price` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`p_id`, `ip_add`, `qty`, `p_price`) VALUES
+(2, '::1', 456, 5),
+(7, '::1', 45, 12),
+(11, '::1', 12, 100),
+(17, '::1', 3, 20),
+(22, '::1', 4, 50);
 
 -- --------------------------------------------------------
 
@@ -167,14 +178,6 @@ CREATE TABLE `orders` (
   `order_status` text NOT NULL,
   `address` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`invoice_no`, `date`, `due_amount`, `customer_id`, `order_status`, `address`) VALUES
-(667211732, '2022-04-17', '36', 0, 'pending', ''),
-(1714918456, '2022-04-17', '280', 0, 'pending', '');
 
 -- --------------------------------------------------------
 
