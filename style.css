@@ -23,7 +23,7 @@ header{
     padding: 20px 10px;
     width: 100%;
     display: block;
-    z-index: 2;/*z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display:flex elements). */
+    z-index: 3;/*z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display:flex elements). */
     background-color:rgb(0, 0, 0);
 }
 
@@ -53,7 +53,6 @@ header{
 }
 .navbar li{
     list-style: none;
-    justify-content: space-evenly;
 }
 .navbar a{
     color: rgb(255, 255, 255);
@@ -458,6 +457,7 @@ footer{
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 2;
     padding: 20px;
     width: 100%;
     background: #000;
@@ -553,7 +553,7 @@ footer .social-media .fa-brands{
     background-color: #333;
 }
 .btn-danger{
-    margin-top: 20px;
+    margin: 20px 0px 10px;
     padding: 5px 10px;
     font-size: 1em;
     color: #fff;
@@ -567,6 +567,112 @@ footer .social-media .fa-brands{
 #inscrire{
     color: #333;
 }
+/*product image*/
+
+#fetched-img{
+    object-fit: contain;
+}
+/*search filtering css */
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: 160px;
+    overflow: hidden;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+/*products */
+.list ul, .list li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  img {
+    width: 100%;
+  }
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0.4em;
+  }
+  .list a{
+      color: #000;
+      text-decoration: none;
+      font-style: italic;
+  }
+  .list a:hover{
+    color: #fb911f;
+}
+.list .list-content{
+    border: #333 1px solid;
+    border-radius: 5px ;
+    margin: 10px;
+}
+  
+  /*Flex items*/
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .list-item {
+      display: flex; 
+    padding: 0.5em;
+      width: 100%;
+  }
+  @media all and (min-width: 40em) {
+    .list-item {
+      width: 50%;
+    }
+  }
+  @media all and (min-width: 60em) {
+    .list-item {
+      width: 33.33%;
+    }
+  }
+  .list-content {
+      background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+      width: 100%;
+  }
+  .list-content p {
+      flex: 1 0 auto;
+  }
+
+
+
 @media all and (min-width: 360px) and (max-width: 767px)
 {
     #banniere{
@@ -626,48 +732,11 @@ footer .social-media .fa-brands{
         min-width:100%;
         
     }
+    .container{
+        margin-bottom: 100px;
+    }
     
 }
 
-/*search filtering css */
-.slide-image {
-    width: 100%;
-}
 
-.carousel-holder {
-    margin-bottom: 30px;
-}
-
-.carousel-control,
-.item {
-    border-radius: 4px;
-}
-
-.caption {
-    height: 160px;
-    overflow: hidden;
-}
-
-.caption h4 {
-    white-space: nowrap;
-}
-
-.thumbnail img {
-    width: 100%;
-}
-
-.ratings {
-    padding-right: 10px;
-    padding-left: 10px;
-    color: #d17581;
-}
-
-.thumbnail {
-    padding: 0;
-}
-
-.thumbnail .caption-full {
-    padding: 9px;
-    color: #333;
-}
 

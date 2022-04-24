@@ -58,7 +58,7 @@ include("includes/functions.php");
 
             <div class="col-md-9">
             	<br/>
-                <div class="row filter_data"></div> <!-- -->
+                <ul class="list filter_data"></ul> <!-- -->
             </div>
         </div>
 

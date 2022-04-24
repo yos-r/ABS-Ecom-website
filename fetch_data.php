@@ -38,13 +38,14 @@ if(isset($_POST["action"]))
         while($row = mysqli_fetch_array($result))
 		{
 			$output .= '
-			<div class="col-sm-4 col-lg-3 col-md-3">
-				<div style="border:1px solid #ccc; border-radius:5px; padding:16px; margin-bottom:16px; ">
-					<img src="images/products/'. $row['product_img'] .'" style="height:150px"  class="img-responsive" >
-					<p align="center"><strong><a href="'.$row['product_url'].'">'. $row['product_title'] .'</a></strong></p>
-					<h4 style="text-align:center;" class="text-danger" >'. $row['product_price'] .'</h4>
-				</div>
-			</div>
+			<li class="list-item">
+    			<div class="list-content">
+      				<img src="images/products/'. $row['product_img'] .'" alt="image of '. $row['product_title'] .'" />
+					<a align="center" href="'.$row['product_url'].'">'. $row['product_title'] .'</a>
+      				<h4 style="text-align:center;" class="text-danger" >'. $row['product_price'] .' DT</h4>
+    			</div>
+  			</li>
+			
 			';
 		}
 	}
@@ -56,3 +57,10 @@ if(isset($_POST["action"]))
 }
 
 ?>
+<!-- <div class="col-sm-4 col-lg-3 col-md-3">
+				<div style="min-width:160px;border:1px solid #ccc; border-radius:5px; padding:16px; margin-bottom:16px;">
+					<img id="fetched-img" src="images/products/'. $row['product_img'] .'" style="max-height:130px; object-fit:contain;"  class="img-responsive" >
+					<p align="center"><strong><a href="'.$row['product_url'].'">'. $row['product_title'] .'</a></strong></p>
+					<h4 style="text-align:center;" class="text-danger" >'. $row['product_price'] .'</h4>
+				</div>
+			</div> -->
