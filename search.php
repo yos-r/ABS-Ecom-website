@@ -7,7 +7,7 @@
     require_once("includes/functions.php");
 ?>
 <div class="container">
-<div class="col-md-9">
+<ul class="list filter_data">
 <?php 
     if(isset($_GET["search"]))
     {
@@ -21,13 +21,13 @@
             while($row = mysqli_fetch_array($result))
             {
                 $output .= '
-                <div class="col-sm-4 col-lg-3 col-md-3">
-                    <div style="border:1px solid #ccc; border-radius:5px; padding:16px; margin-bottom:16px; ">
-                        <img src="images/products/'. $row['product_img'] .'" style="width:200px" class="img-responsive">
-                        <p align="center"><strong><a href="#">'. $row['product_title'] .'</a></strong></p>
-                        <h4 style="text-align:center;" class="text-danger" >'. $row['product_price'] .'DT </h4>
-                    </div>
-                </div>
+                <li class="list-item">
+    			    <div class="list-content">
+      				    <img src="images/products/'. $row['product_img'] .'" alt="image of '. $row['product_title'] .'" />
+					    <a align="center" href="'.$row['product_url'].'">'. $row['product_title'] .'</a>
+      				    <h4 style="text-align:center;" class="text-danger" >'. $row['product_price'] .' DT</h4>
+    			    </div>
+  			    </li>
                 ';
             }
         }
@@ -37,8 +37,7 @@
         }
         echo $output;
     }?>
-
-</div>
+</ul>
 </div>
 
 <?php require_once("includes/footer.php"); ?>
