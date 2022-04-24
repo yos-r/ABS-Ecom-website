@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
                 <ul class="navbar-nav">
                     <li><a href="../index.php#apropos">Apropos</a></li>
-                    <li><a href="../index.php#produits">Produits</a></li>
+                    <li><a href="../products.php">Produits</a></li>
                     <li><a href="../index.php#temoignage">Temoignage</a></li>
                     <li><a href="../index.php#contact">Contact</a></li>
                     <?php
@@ -41,7 +41,7 @@
                 </ul>
         </nav> 
         <div class="search-box">
-            <form method="get" class="search-form" action="search.php"> 
+            <form method="get" class="search-form" action="../search.php"> 
                 <input type="text" autocomplete="off" placeholder="Chercher produit..." name="searchterm" />
                 <button type="submit" name="search">chercher</button>
                 <div class="result" style="width: 100%;box-sizing: border-box;"></div>

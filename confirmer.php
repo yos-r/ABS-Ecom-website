@@ -7,8 +7,13 @@
     $customer_id = $row_customer['customer_id'];
     ?>
 
-  <h1 class="text-center">Cliquez ici pour confirmer la commande</h1>
-    <p class="lead text-center">
-      <a href="order.php?c_id=<?php echo $customer_id; ?>">Confirmer</a>
-    </p>
+  <h1 class="text-center">Informations de livraison:</h1>
+  <form method="post" action="order.php">
+  <label> Adresse de livraison </label>
+  <input type="text" name="adress" placeholder="Adresse" required> 
+  <button type="submit" name="commande"> Commander </button>
+    <!--<p class="lead text-center">
+      <a href="order.php?c_id=<?php //echo $customer_id; ?>">Confirmer</a>
+    </p>-->
+  </form>
 </div>
