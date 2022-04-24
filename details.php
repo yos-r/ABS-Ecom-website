@@ -34,13 +34,13 @@
 ?>
 <section>
     <div class="row" style="background-color:white;">
-    <h1 class="text-center" > <?php echo $pro_title; ?>  Prix : <?php echo $pro_price ?> DT </h1>
+    <h1 style="margin-top:20px;"class="text-center" > <?php echo $pro_title; ?>  Prix : <?php echo $pro_price ?> DT </h1>
     </div>
     <div class="row" style="background-color:white;">
         <div class="col50" style="background-color:white;">
             <img src="images/products/<?php echo $pro_img?>" style="width:200px" >
         </div>
-        <div class="col50" style="background-color:white;">
+        <div style="display:flex; flex-direction:column;" class="col50" style="background-color:white;">
         <form action="" method="post" >
             <div class="form-group"><!-- form-group Starts -->
                 <label >Quantité </label>

@@ -670,9 +670,6 @@ footer .social-media .fa-brands{
   .list-content p {
       flex: 1 0 auto;
   }
-
-
-
 @media all and (min-width: 360px) and (max-width: 767px)
 {
     #banniere{
