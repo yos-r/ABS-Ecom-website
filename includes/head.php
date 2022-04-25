@@ -8,12 +8,13 @@
     <link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
-    <link rel="stylesheet" href="./style.css">
     <title>ABS</title>
     <!-- script de la recherche actualisée -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="jquery/jquery-ui.js"></script>
     <link rel="stylesheet" href="jquery/jquery-ui.css">
+    <link rel="stylesheet" href="./style.css">
+
 
     <script>
     $(document).ready(function(){

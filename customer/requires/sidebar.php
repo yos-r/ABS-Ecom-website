@@ -19,11 +19,13 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <div class="panel-body"><!-- panel-body Starts -->
         <ul class="nav nav-pills nav-stacked"><!-- nav nav-pills nav-stacked Starts -->
+            <br><br><br><br><br>            <br><br><br><br><br>
+
             <li class="<?php if(isset($_GET['my_orders'])){ echo "active"; } ?>">
-                <a href="my_account.php?my_orders"> <i class="fa fa-list"> </i> My Orders </a>
+                <a href="my_account.php?my_orders"> <i class="fa fa-list"> </i> Mes commandes </a>
             </li>
             <li class="<?php if(isset($_GET['edit_account'])){ echo "active"; } ?>">
-                <a href="my_account.php?edit_account"> <i class="fa fa-pencil"></i> Edit Account </a>
+                <a href="my_account.php?edit_account"> <i class="fa fa-pencil"></i> Mettre à jour compte </a>
             </li>
             <li class="<?php if(isset($_GET['change_pass'])){ echo "active"; } ?>">
                 <a href="my_account.php?change_pass"> <i class="fa fa-user"></i> Changer mot de passe </a>

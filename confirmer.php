@@ -11,6 +11,7 @@
   <form method="post" action="order.php">
   <label> Adresse de livraison </label>
   <input type="text" name="adress" placeholder="Adresse" required> 
+  <input type="text" name="c_id" value="<?php echo $customer_id;?>" hidden>
   <button type="submit" name="commande"> Commander </button>
     <!--<p class="lead text-center">
       <a href="order.php?c_id=<?php //echo $customer_id; ?>">Confirmer</a>
