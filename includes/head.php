@@ -14,6 +14,7 @@
     <script src="jquery/jquery-ui.js"></script>
     <link rel="stylesheet" href="jquery/jquery-ui.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
 
     <script>

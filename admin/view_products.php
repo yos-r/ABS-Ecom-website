@@ -11,6 +11,9 @@
      <link rel="stylesheet" href="style1.css">
      <script src="sweetalert2@11.js"></script>
      <style>
+           body{
+           font-family: Consolas;
+           }
      </style>
  </head>
  <body>

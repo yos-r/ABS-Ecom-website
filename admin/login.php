@@ -5,6 +5,8 @@
 	<style>
 body{
 	background-image: url("WhatsApp Image 2022-04-28 at 15.49.36.jpeg") ; 
+	font-family: Consolas;
+
 }
 form{
 	border:1px solid white;
