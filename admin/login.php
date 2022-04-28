@@ -1,7 +1,34 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="" />
+	<style>
+body{
+	background-image: url("WhatsApp Image 2022-04-28 at 15.49.36.jpeg") ; 
+}
+form{
+	border:1px solid white;
+	border-radius:5px;
+	margin-top: 10%;
+	margin-left:40%;
+	width:300px; 
+
+}
+input{
+	margin:10px; 
+	padding:10px;
+	margin-left:55px;
+}
+h1{
+	color:white;
+	margin-left:70px ; 
+}
+input[type="submit"]
+{
+	margin-left:35%;
+}
+	</style>
+
 </head>
 <body>
 <?php
@@ -38,7 +65,9 @@ if (isset($_POST['admin_email']))
 <form class="box" action="" method="post" name="login">
 <h1 class="box-title">Connexion</h1>
 <input type="text" class="box-input" name="admin_email" placeholder="admin_mail ">
+<br>
 <input type="password" class="box-input" name="admin_pass" placeholder="admin_pass">
+<br>
 <input type="submit" value="Connexion " name="submit" class="box-button">
 <?php if (! empty($message)) { ?>
     <p class="errorMessage"><?php echo $message ; ?></p>

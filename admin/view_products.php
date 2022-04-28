@@ -11,10 +11,7 @@
      <link rel="stylesheet" href="style1.css">
      <script src="sweetalert2@11.js"></script>
      <style>
-    
      </style>
-
-
  </head>
  <body>
      
@@ -55,7 +52,6 @@
                                 $pro_manif = $row_pro['manufacturer_id'];
                                 
                             ?>
-
                             <tr>
                                 <td><?php echo $pro_id; ?></td>
                                 <td><?php echo $pro_title; ?></td>
