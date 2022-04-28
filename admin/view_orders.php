@@ -58,7 +58,7 @@
                                 <td><?php echo $order_adress; ?></td>
 
                                 <td>  <!-- button livrer-->
-                                    <a href="up.php?ord_id=<?php echo $order_id; ?>"> livrer </a>
+                                    <a href="up.php?ord_id=<?php echo $invoice_no; ?>"> livrer </a>
                                 </td>
                                 
                                 
