@@ -11,7 +11,8 @@ session_start();
 <div class="col-md-12">
 <div class="box" >
     <div class="box-header" >
-        <center><h2> register </h2></center>
+    <h1><span>S</span> 'inscrire</h1>
+        <p class="lead" >Créer votre compte ABS</p>
     </div>
 
     <form action="customer_register.php" method="post" enctype="multipart/form-data" ><!-- form Starts -->
@@ -96,4 +97,6 @@ if(isset($_POST['register'])){
 
         }
 </script>
+<br>
+<br><br><br>
 </body>
