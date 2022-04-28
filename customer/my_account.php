@@ -60,11 +60,13 @@ else {
                           $run_product_name=mysqli_query($con,$get_product_name);
                           $row_product_name=mysqli_fetch_array($run_product_name);
                           $product_name=$row_product_name['product_title'];
+                          $product_url=$row_product_name['product_url'];
+
                           $pro_qty = $row_order['qty'];
                           $pro_subtotal=$row_order['subtotal'];
                           ?>
                           <tr>
-                          <th><?php echo $pro_id; ?></th>
+                          <td><a href="../<?php echo $product_url ?>"><?php echo $product_name; ?></a></th>
                           <td><?php echo $pro_qty; ?></td>
                           <td><?php echo $pro_subtotal; ?></td>
                       </tr>

@@ -10,7 +10,7 @@ session_start();
 <div class="col-md-12">
 <div class="box" >
     <center>
-    <h1>Login</h1>
+    <h1><span>L</span>ogin</h1>
     <p class="lead" >Je suis un(e) client(e) inscrit(e)</p>
     </center>
 </div>
