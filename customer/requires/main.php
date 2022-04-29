@@ -20,7 +20,7 @@
                         } 
                         else
                         { 
-                            echo '<li><a href="../customer/my_account.php?my_orders">Account</a></li>';
+                            echo '<li><a href="customer/my_account.php?my_orders">Account</a></li>';
                         }   
                     ?> 
                     <?php
@@ -29,7 +29,7 @@
                         } 
                         else
                         { 
-                            echo '<li><a href="logout.php" ">Logout</a></li>';
+                            echo '<li><a href="customer/logout.php" ">Logout</a></li>';
                         }   
                     ?> 
                     <li><a id="cart" href="../cart.php">

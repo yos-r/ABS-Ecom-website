@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+
 @font-face{
     font-family:'poppins';
     src: url('./fonts/Poppins-Regular.ttf');
@@ -639,7 +639,7 @@ footer .social-media .fa-brands{
     border-radius: 5px ;
     margin: 10px;
 }
-
+  
   /*Flex items*/
   .list {
     display: flex;
@@ -650,91 +650,6 @@ footer .social-media .fa-brands{
     padding: 0.5em;
       width: 100%;
   }
-
-/*customer login */
-div.container{
-    width: 100%;
-} 
-div.box{
-    width: 100%;
-} 
-.box h1{
-    margin-top:30px;
-    text-align: center;
-    margin-bottom: 5px;
-    color:black;
-    font-size:50px;
-}
-.box span{
-    color: #fb911f;
-    font-size: 60px;
-    font-family: 'Water Brush', cursive;
-
-}
-.box p{
-    text-align: center;
-    color:black;
-    font-size: 10px;
-    margin-bottom:10px;
-}
-
-
-div.col-md-12{
-    
-    padding: 10px 10px;
-    background: #fff;
-    box-shadow: 0px -1px 9px 4px rgb(255 255 255 / 80%);
-    max-width: 500px;
-    margin: auto;
-    
-}
-
-.form-group label{
-
-    display: block;
-	width:110px;
-	float: left;
-    color:black; 
-    font-size: 20px;
-    font-family: 'Source Sans Pro', sans-serif; 
-}
-
-.form-group input{
-    display: inline-block;
-    width: 250px;
-    height: 30px;
-    margin-bottom: 30px;
-    margin-left: 30px;
-}
-#login
-{   margin-bottom: 3px;
-    margin-top:2px;
-    padding:4px;
-    font-size: 17px;
-    font-weight: 200;
-    color: #ffff;
-    background: #fb911f;
-    display: inline-block;
-    cursor: pointer;
-    letter-spacing: 1px;
-    border: none;/* remarque par defaut il ya une bordure*/
-    width: 150px;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10%;
-    border-radius: 10px;
-      
-}
-
-h6{
-    text-align: center;
-    color: black; 
-    margin-left: 10%  
-}
-#lien{
-    color:black;
-}
-/* customer login ends here*/
   @media all and (min-width: 40em) {
     .list-item {
       width: 50%;

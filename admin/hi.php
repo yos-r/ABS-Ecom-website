@@ -16,9 +16,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 	<style>
-		body{
-  font-family: Consolas;
-		}
 
 	h1{
 		margin-left:30%;
