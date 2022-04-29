@@ -7,13 +7,29 @@
     $customer_id = $row_customer['customer_id'];
     ?>
 
-  <h1 class="text-center">Informations de livraison:</h1>
+  <h2 class="text-center">Informations de livraison:</h1>
   <form method="post" action="order.php">
-  <label> Adresse de livraison </label>
-  <input type="text" name="adress" placeholder="Adresse" required> 
-  <button type="submit" name="commande"> Commander </button>
-    <!--<p class="lead text-center">
-      <a href="order.php?c_id=<?php //echo $customer_id; ?>">Confirmer</a>
-    </p>-->
+  <div class="form-group"><!-- form-group Starts -->
+      <label> Gouvernorat </label>
+      <select required>
+        <option value="">Tunis</option>
+        <option value="">Ariana</option>
+        <option value="">Manouba</option>
+        <option value="">Ben Arous</option>
+      </select>
+  </div>
+  <div class="form-group"><!-- form-group Starts -->
+      <label> Adresse de livraison </label>
+      <input type="text" name="adress" value="<?php echo $row_customer['customer_address'] ?>" style="height:50px;" required>
+  </div>
+  <div class="form-group"><!-- form-group Starts -->
+      <label> Numéro de téléphone </label>
+      <input type="text" name="telephone"  required>
+  </div>
+  <div class="text-center"><!-- text-center Starts -->
+            <button type="submit" name="commande" class="btn btn-primary">
+                Passer commande
+            </button>
+        </div>
   </form>
 </div>

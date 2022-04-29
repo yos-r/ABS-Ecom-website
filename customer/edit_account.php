@@ -9,7 +9,7 @@
     $customer_address = $row_customer['customer_address'];
 ?>
 
-<h1 align-text="center" > Éditer compte </h1>
+<h1 align-text="center" > Mettre à jour compte </h1>
 <form action="" method="post" enctype="multipart/form-data" ><!--- form Starts -->
     <div class="form-group" >
         <label> Nom </label>

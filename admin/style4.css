@@ -1,0 +1,16 @@
+input{
+    margin: 10px;
+}
+form{
+    border: 1px solid white ;
+    border-radius: 5px;
+    color: white;
+    width: 350px;
+    margin-left:35%;
+    margin-top:10%;
+
+}
+input[type="submit"]
+{
+ margin-left: 43%;
+}

@@ -1,13 +1,6 @@
 body {
-<<<<<<< HEAD
   background: #000000;
-<<<<<<< HEAD
   font-family: Consolas;
-=======
-  background: #1c242d;
->>>>>>> parent of 99dbf44 (fin)
-=======
->>>>>>> parent of d058175 (Changed admin font and added favicon)
 }
 .box {
   border: 1px solid #c4c4c4;
@@ -31,11 +24,7 @@ h1.box-title {
 }
 .box-button {
   border-radius: 5px;
-<<<<<<< HEAD
   background: #fb911f;
-=======
-  background: #d2483c;
->>>>>>> parent of 99dbf44 (fin)
   text-align: center;
   cursor: pointer;
   font-size: 19px;
@@ -85,10 +74,7 @@ p.errorMessage {
     padding: 5px 10px;
     color: #FFFFFF;
     border-radius: 3px;
-<<<<<<< HEAD
 }
 .sucess{
   text-align: center;
-=======
->>>>>>> parent of 99dbf44 (fin)
 }

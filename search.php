@@ -22,11 +22,13 @@
             {
                 $output .= '
                 <li class="list-item">
-    			    <div class="list-content">
-      				    <img src="images/products/'. $row['product_img'] .'" alt="image of '. $row['product_title'] .'" />
-					    <a align="center" href="'.$row['product_url'].'">'. $row['product_title'] .'</a>
-      				    <h4 style="text-align:center;" class="text-danger" >'. $row['product_price'] .' DT</h4>
-    			    </div>
+                <div class="list-content">
+                <a href="'.$row['product_url'].'">
+                  <img src="images/products/'. $row['product_img'] .'" alt="image of '. $row['product_title'] .'" />
+                </a>
+                  <a align="center" href="'.$row['product_url'].'">'. $row['product_title'] .'</a>
+                  <h4 style="text-align:center;" class="text-danger" >'. $row['product_price'] .' DT</h4>
+            </div>
   			    </li>
                 ';
             }
@@ -39,7 +41,13 @@
     }?>
 </ul>
 </div>
-
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
 <?php require_once("includes/footer.php"); ?>
+
 </body>
 </html>

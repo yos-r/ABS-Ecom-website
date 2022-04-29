@@ -1,3 +1,4 @@
+
 table{
     border: 1px solid;
     color: white;
@@ -15,6 +16,8 @@ a{
 h1{
     margin-top: 5%;
     margin-left: 6%;
+    font-family: Consolas;
+
 }
 h2{
     margin-left: 10%;
