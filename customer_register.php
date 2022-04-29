@@ -19,7 +19,7 @@ require_once("includes/main.php");
         </div>
         <div class="form-group">
             <label>  Email</label>
-            <input type="text" class="form-control" name="c_email" required>
+            <input type="email" class="form-control" name="c_email" placeholder="exemple@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
         </div>
         <div class="form-group">
             <label>  Adresse de livraison</label>
@@ -27,7 +27,7 @@ require_once("includes/main.php");
         </div>
         <div class="form-group"><!-- form-group Starts -->
             <label> Mot de passe </label>
-            <input type="password" class="form-control" id="pass" name="c_pass" required>
+            <input type="password" class="form-control" id="pass" name="c_pass" pattern=".{8,}" id="register" onclick="envoyer(this.form)" required>
         </div>
         <div class="text-center"><!-- text-center Starts -->
             <button type="submit" name="register" class="btn btn-primary">
@@ -77,3 +77,19 @@ if(isset($_POST['register'])){
     }
 }
 ?>
+<script>
+        function envoyer(formulaire){
+            let condition1=/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+            let condition2=/^.{8,}$/;
+            let condition3=/^[0-9]{2}-[0-9]{3}-[0-9]{3}$/;
+            if(formulaire.c_name.value!="" && condition1.test(formulaire.c_email.value)==true && condition2.test(formulaire.c_pass.value)==true && condition3.test(formulaire.c_tel.value)==true)
+            {
+               alert(" c'est bon votre compte ABS  est crée");
+            }
+            else{
+                alert("Erreur");
+                
+            }
+        }
+</script>
+</body>

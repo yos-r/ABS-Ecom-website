@@ -8,6 +8,7 @@ session_start();
 <div id="content" >
 <div class="container" >
 <div class="col-md-12">
+
 <div class="box" >
     <center>
     <h1>Login</h1>
@@ -18,11 +19,11 @@ session_start();
 <form method="post" >
     <div class="form-group" >
         <label>Email</label>
-        <input type="text" class="form-control" name="c_email" required >
+        <input type="email" placeholder="exemple@gmail.com" class="form-control" name="c_email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required >
     </div>
     <div class="form-group" >
         <label>Password</label>
-        <input type="password" class="form-control" name="c_pass" required >
+        <input type="password" class="form-control" name="c_pass" pattern=".{8,}" required >
     </div>
     <div class="text-center" >
         <button name="login" value="Login" class="btn btn-primary" >
@@ -31,7 +32,7 @@ session_start();
 </form>
 
 <center>
-    <a id="inscrire" href="../customer_register.php"><h4>s'inscrire ici</h4></a>
+    <a id="inscrire" href="../customer_register.php"><h4>S'inscrire ici</h4></a>
 </center>
 </div>
 
