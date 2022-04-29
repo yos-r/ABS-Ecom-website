@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("includes/connection.php");
 include("includes/head.php");
 include("includes/main.php");
@@ -120,8 +119,6 @@ $(document).ready(function(){
 
 });
 </script>
-<br><br><br>
-<br>
 <?php include "includes/footer.php" ?>
 
 </body>

@@ -19,7 +19,7 @@ require_once("includes/main.php");
    <div class="row">
         <div class="col50">
             <h2 class="titre-texte"><span>A</span> Propos De Nous</h2>
-               <h3>Nous somme une société Tunisienne spécialisée dans la vente des solutions de construction. </h3> 
+               <h3>Nous somme une société Tunisienne spécialisée dans la vente de tous les solutions de construction</h3> 
                <br>
                <h3>Nous portons les produits de: *insert brand with php*</h3>
         </div>
