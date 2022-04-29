@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="jquery/jquery-ui.css">
 <<<<<<< HEAD
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
 =======
 >>>>>>> parent of e435d8b (minor changes)

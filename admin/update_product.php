@@ -8,11 +8,6 @@
 <<<<<<< HEAD
     <script src="sweetalert2@11.js"></script>
 <link rel="stylesheet" href="style3.css">
-<style>
-           body{
-           font-family: Consolas;
-           }
-     </style>
    
 =======
 >>>>>>> parent of 99dbf44 (fin)

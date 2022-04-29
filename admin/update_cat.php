@@ -13,11 +13,6 @@ $cat_img=$_GET['cat_img'];
     <script src="sweetalert2@11.js"></script>
     <title>Document</title>
     <link rel="stylesheet" href="style3.css">
-    <style>
-           body{
-           font-family: Consolas;
-           }
-     </style>
 </head>
 <body>
 
