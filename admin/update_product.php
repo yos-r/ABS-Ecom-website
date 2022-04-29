@@ -83,9 +83,9 @@ $product_id=$_GET['product_id'];
 $product_title=$_GET['product_title'];
 $product_img=$_GET['product_img'];
 $product_price=$_GET['product_price'];
-$product_cat=$_GET['product_cat'];
+$product_cat=$_GET['cat_id'];
 $product_desc=$_GET['product_desc'];
-$product_manif=$_GET['product_manif'];
+$product_manif=$_GET['manufacturer_id'];
 
 $query="UPDATE `products` SET `cat_id`='$product_cat',`manufacturer_id`='$product_manif',`product_title`='$product_title',`product_price`='$product_price',`product_url`='[value-7]',`product_img`='$product_img',`product_desc`='$product_desc' 
 WHERE product_id='$product_id'"; 

@@ -3,7 +3,6 @@
     require_once("includes/connection.php");
     require_once("includes/head.php");
     require_once("includes/main.php");
-    
     require_once("includes/functions.php");
 ?>
 <div class="container">

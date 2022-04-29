@@ -7,10 +7,10 @@ require_once("includes/main.php");
 ?>
 <section class="banniere" id="banniere">
     <div class="contenu">
-        <h2>soyez les bienvenus chez ABS</h2>
+        <h2>Soyez les bienvenus chez ABS</h2>
         <p>Vente des Matériaux de Construction en Tunisie, Coffrages,
             Échafaudages, Étaiements et Produits BTP.</p>
-        <a href="#apropos" class="btn1">Apropos</a>
+        <a href="#apropos" class="btn1">A propos</a>
         <a href="#produits" class="btn2">Nos produits</a>
     </div>
 </section>
@@ -19,9 +19,9 @@ require_once("includes/main.php");
    <div class="row">
         <div class="col50">
             <h2 class="titre-texte"><span>A</span> Propos De Nous</h2>
-               <h3>Nous somme une société Tunisienne spécialisée dans la vente de tous les solutions de construction</h3> 
+               <h3>Nous somme une société Tunisienne spécialisée dans la vente de toutes les solutions de construction.</h3> 
                <br>
-               <h3>Nous portons les produits de: *insert brand with php*</h3>
+               <h3>Nous portons les produits de: Derbigum, Kaufmann, Mob Pedinhaus et bien d'autres fabricants renommés par leur dévouement à la qualité.</h3>
         </div>
        <div id="img-apropos" class="col50">
             <div class="img">

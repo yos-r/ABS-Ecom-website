@@ -1,19 +1,17 @@
 <?php
-
 session_start();
-    require_once("includes/connection.php");
-    require_once("includes/head.php");
-    require_once("includes/functions.php");
-    require_once("includes/main.php");
+require_once("includes/connection.php");
+require_once("includes/head.php");
+require_once("includes/functions.php");
+require_once("includes/main.php");
 ?>
 <div id="content" >
 <div class="container" >
 <div class="col-md-12">
 <div class="box" >
     <div class="box-header" >
-        <center><h2> register </h2></center>
+        <center><h2> Créer nouveau compte </h2></center>
     </div>
-
     <form action="customer_register.php" method="post" enctype="multipart/form-data" ><!-- form Starts -->
         <div class="form-group" >
             <label> Nom</label>
