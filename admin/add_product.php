@@ -1,74 +1,77 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style4.css" >
-<script src="sweetalert2@11.js"></script>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <?php
 require('config.php');
 
-if (isset($_POST['submit'])){
-	$product_id = stripslashes($_POST['product_id']);
+if (isset($_REQUEST['product_id'], $_REQUEST['product_desc'], $_REQUEST['cat_id'], $_REQUEST['product_img'], $_REQUEST['product_price'], $_REQUEST['product_title'], $_REQUEST['subcat_id'], $_REQUEST['manifacturer'])){
+
+	$product_id = stripslashes($_REQUEST['product_id']);
 	$product_id = mysqli_real_escape_string($conn, $product_id); 
 
-	$product_desc = stripslashes($_POST['product_desc']);
+	$product_desc = stripslashes($_REQUEST['product_desc']);
 	$product_desc = mysqli_real_escape_string($conn, $product_desc);
 
-	$cat_id = stripslashes($_POST['cat_id']);
+	$cat_id = stripslashes($_REQUEST['cat_id']);
 	$cat_id = mysqli_real_escape_string($conn, $cat_id);
 
-	$product_img = stripslashes($_POST['product_img']);
+	$product_img = stripslashes($_REQUEST['product_img']);
 	$product_img = mysqli_real_escape_string($conn, $product_img);
 
-	$product_price = stripslashes($_POST['product_price']);
+	$product_price = stripslashes($_REQUEST['product_price']);
 	$product_price = mysqli_real_escape_string($conn, $product_price);
 
-	$product_title = stripslashes($_POST['product_title']);
+	$product_title = stripslashes($_REQUEST['product_title']);
 	$product_title = mysqli_real_escape_string($conn, $product_title);
 
-	
+	$subcat_id = stripslashes($_REQUEST['subcat_id']);
+	$subcat_id = mysqli_real_escape_string($conn, $subcat_id);
 
-	$manifacturer = stripslashes($_POST['manifacturer']);
+	$manifacturer = stripslashes($_REQUEST['manifacturer']);
 	$manifacturer = mysqli_real_escape_string($conn, $manifacturer);
 
 
 
-    $query = "INSERT into products (product_id,product_desc,cat_id,product_img,product_price,product_title,manufacturer_id)
-	VALUES ('$product_id', '$product_desc', '$cat_id', '$product_img','$product_price','$product_title','$manifacturer')";
-	echo $query ;
-    $res = mysqli_query($conn,$query);
+
+
+
+
+
+	
+    $query = "INSERT into 'admins' ('product_id','product_desc','cat_id','product_img','product_price','product_title','subcat_id','manifacturer')
+				  VALUES ('$product_id', '$product_desc', '$cat_id', '$product_img','$product_price','$product_title','$subcat_id','$manifacturer')";
+    $res = mysqli_query($conn, $query);
 
     if($res){
-		echo "<script>"; 
-		echo "Swal.fire('produit ajouté  avec succés', '', 'success')"; 
-		echo "</script>";		 
-		}
-		else {
-		echo "<script>"; 
-		echo "Swal.fire('Echec!', '', 'failure')"; 
-		echo "</script>";
-		}
-}
-
+       echo "<div class='sucess'>
+             <h3>L'utilisateur a été créée avec succés.</h3>
+             <p>Cliquez <a href='home.php'>ici</a> pour retourner à la page d'accueil</p>
+			 </div>";
+    }
+}else{
 ?>
 <form class="box" action="" method="post">
-    <h1 class="box-title">Add product</h1>
+    <h1 class="box-title">Add user</h1>
 	<input type="number" class="box-input" name="product_id" placeholder="product_id" required >
-	<br>
     <input type="textarea" class="box-input" name="product_desc" placeholder="product_desc"  >
-	<br>
 	<input type="number" class="box-input" name="cat_id" placeholder="cat_id"  >
-	<br>
 	<input type="file" class="box-input" name="product_img" placeholder="product_img"  >
-	<br>
 	<input type="text" class="box-input" name="product_price" placeholder="product_price"  >
-	<br>
 	<input type="text" class="box-input" name="product_title" placeholder="product_title"  >
-	<br>
-	<input type="number" class="box-input" name="manifacturer" placeholder="cat_id"  >
-	<br>
+	<input type="number" class="box-input" name="subcat_id" placeholder="subcat_id"  >
+    <div class="input-group">
+			<select class="box-input" name="manifacturer" id="manifacturer" >
+				<option selected>marque 1 +id</option>
+				<option >marque 2 +id</option>
+				<option >marque n +id</option>
+				//......
+			</select>
+	</div>
     <input type="submit" name="submit" value="+ Add" class="box-button" />
 </form>
+<?php } ?>
 </body>
 </html>

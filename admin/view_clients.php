@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
  require('config.php');
  ?>
@@ -63,3 +64,5 @@
                 </div>
     </body> 
 </html>           
+=======
+>>>>>>> parent of 99dbf44 (fin)

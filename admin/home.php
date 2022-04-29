@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 	// Initialiser la session
 	session_start();
 	// Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
@@ -9,6 +9,7 @@
 ?>
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
 <head>
 <style>
 body {
@@ -16,51 +17,21 @@ body {
   background-image: url("WhatsApp Image 2022-04-28 at 15.49.36.jpeg") ; 
   font-family: Consolas;
 }
+=======
+	<head>
+	<link rel="stylesheet" href="../style.css" />
+	</head>
+	<body>
+		<div class="sucess">
+		<h1>Bienvenue <?php echo $_SESSION['username']; ?>!</h1>
+		<p>C'est votre espace admin.</p>
+		<a href="view_products.php">View product </a> 
+		<a href="add_produit.php">Add product</a> |
+		<a href="#">Update product </a> 
+		<a href="delete_product.php"> Delete product </a> 
+>>>>>>> parent of 99dbf44 (fin)
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 25%;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-}
-
-li a {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-li a.active {
-  background-color:#344E5C;
-  color: white;
-}
-
-li a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-}
-</style> 
-</head>
-<body>
-
-
-<ul>
-  <li><a class="active" href="hi.php"target="right_side">Home</a></li>
-  <li><a href="view_products.php"target="right_side">Products</a></li>
-  <li><a href="view_categories.php"target="right_side">Categories</a></li>
-  <li><a href="view_orders.php"target="right_side">Orders</a></li>
-  <li><a href="view_clients.php"target="right_side">Clients</a></li>
-  <li><a href="logout.php">Deconnexion</a></li>
-</ul>
-
-<iframe name ="right_side" style="margin-left:25%;padding:1px 16px;height:1000px; width: 72%;">
- 
-</iframe>
-
-</body>
+		<a href="logout.php">Déconnexion</a>
+		</div>
+	</body>
 </html>

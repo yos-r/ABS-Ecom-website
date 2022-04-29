@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
  require('config.php');
  ?>
@@ -78,3 +79,5 @@
                
                 
             
+=======
+>>>>>>> parent of 99dbf44 (fin)
