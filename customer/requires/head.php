@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../style.css">
     <title>ABS</title>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <script>
     $(document).ready(function(){
         $('.search-box input[type="text"]').on("keyup input", function(){

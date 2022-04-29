@@ -14,11 +14,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="jquery/jquery-ui.js"></script>
     <link rel="stylesheet" href="jquery/jquery-ui.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-=======
->>>>>>> parent of e435d8b (minor changes)
 
     <script>
     $(document).ready(function(){
