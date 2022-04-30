@@ -10,26 +10,26 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
                 <ul class="navbar-nav">
-                    <li><a href="../index.php#apropos">Apropos</a></li>
+                    <li><a href="../index.php#apropos">A propos</a></li>
                     <li><a href="../products.php">Produits</a></li>
-                    <li><a href="../index.php#temoignage">Temoignage</a></li>
+                    <li><a href="../index.php#temoignage">Témoignage</a></li>
                     <li><a href="../index.php#contact">Contact</a></li>
                     <?php
                         if(!isset($_SESSION['customer_email'])){
-                        echo '<li><a href="../customer_register.php">Register</a></li>';
+                        echo '<li><a href="../customer_register.php"> S\'inscrire</a></li>';
                         } 
                         else
                         { 
-                            echo '<li><a href="../customer/my_account.php?my_orders">Account</a></li>';
+                            echo '<li><a href="../customer/my_account.php?my_orders">Compte</a></li>';
                         }   
                     ?> 
                     <?php
                         if(!isset($_SESSION['customer_email'])){
-                        echo '<li><a href="customer/customer_login.php">Login</a></li>'; //checkout.php!!
+                        echo '<li><a href="../customer/customer_login.php">Se connecter</a></li>'; //checkout.php!!
                         } 
                         else
                         { 
-                            echo '<li><a href="logout.php" ">Logout</a></li>';
+                            echo '<li><a href="logout.php" ">Se déconnecter</a></li>';
                         }   
                     ?> 
                     <li><a id="cart" href="../cart.php">

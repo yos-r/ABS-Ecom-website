@@ -8,9 +8,9 @@ require_once("includes/main.php");
 <div id="content" >
 <div class="container" >
 <div class="col-md-12">
-<div class="box" >
+<div class="box"  >
     <div class="box-header" >
-        <center><h2> Créer nouveau compte </h2></center>
+        <h2> <span> S</span> 'inscrire </h2>
     </div>
     <form action="customer_register.php" method="post" enctype="multipart/form-data" ><!-- form Starts -->
         <div class="form-group" >
@@ -27,7 +27,7 @@ require_once("includes/main.php");
         </div>
         <div class="form-group"><!-- form-group Starts -->
             <label> Mot de passe </label>
-            <input type="password" class="form-control" id="pass" name="c_pass" pattern=".{8,}" id="register" onclick="envoyer(this.form)" required>
+            <input type="password" class="form-control" id="pass" name="c_pass"  id="register" onclick="envoyer(this.form)" required>
         </div>
         <div class="text-center"><!-- text-center Starts -->
             <button type="submit" name="register" class="btn btn-primary">
@@ -39,6 +39,7 @@ require_once("includes/main.php");
 </div>
 </div>
 </div>
+<br><br><br><br><br><br>
 <?php require("includes/footer.php") ?>
 <?php
 if(isset($_POST['register'])){
@@ -82,14 +83,11 @@ if(isset($_POST['register'])){
             let condition1=/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
             let condition2=/^.{8,}$/;
             let condition3=/^[0-9]{2}-[0-9]{3}-[0-9]{3}$/;
-            if(formulaire.c_name.value!="" && condition1.test(formulaire.c_email.value)==true && condition2.test(formulaire.c_pass.value)==true && condition3.test(formulaire.c_tel.value)==true)
+            if(formulaire.c_name.value!="" && condition1.test(formulaire.c_email.value)==true && condition2.test(formulaire.c_pass.value)==true && condition3.test(formulaire.c_address.value)==true)
             {
                alert(" c'est bon votre compte ABS  est crée");
             }
-            else{
-                alert("Erreur");
-                
-            }
+            
         }
 </script>
 </body>

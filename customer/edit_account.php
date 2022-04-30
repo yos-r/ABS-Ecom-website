@@ -9,18 +9,21 @@
     $customer_address = $row_customer['customer_address'];
 ?>
 
-<h1 align-text="center" > Mettre à jour compte </h1>
+
+<div class="box-header" >
+    <h2> Mettre à jour compte </h2>
+</div>
 <form action="" method="post" enctype="multipart/form-data" ><!--- form Starts -->
     <div class="form-group" >
         <label> Nom </label>
         <input type="text" name="c_name" class="form-control" required value="<?php echo $customer_name; ?>">
     </div>
     <div class="form-group" >
-        <label> Email: </label>
+        <label> Email </label>
         <input type="text" name="c_email" class="form-control" required value="<?php echo $customer_email; ?>">
     </div>
     <div class="form-group" >
-        <label> Customer Address: </label>
+        <label> Adresse </label>
         <input type="text" name="c_address" class="form-control" required value="<?php echo $customer_address; ?>">
     </div>
     <div class="text-center" >

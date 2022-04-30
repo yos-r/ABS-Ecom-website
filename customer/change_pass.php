@@ -1,17 +1,17 @@
 <h1 align="center">Changer MDP </h1>
 <form action="" method="post">
     <div class="form-group">
-        <label>Saisissez votre mdp actuel</label>
+        <label>Mdp actuel</label>
         <input type="text" name="old_pass" class="form-control" required>
     </div>
 
     <div class="form-group">
-        <label>Saisissez le nouveau mdp</label>
+        <label>Nouveau mdp</label>
         <input type="text" name="new_pass" class="form-control" required>
     </div>
 
     <div class="form-group">
-        <label>Saisissez le nouveau mot de passe encore une fois</label>
+        <label>Resaisir</label>
         <input type="text" name="new_pass_again" class="form-control" required>
     </div>
 

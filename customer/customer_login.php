@@ -8,13 +8,11 @@ session_start();
 <div id="content" >
 <div class="container" >
 <div class="col-md-12">
-
 <div class="box" >
-    <center>
-    <h1>Login</h1>
-    <p class="lead" >Je suis un(e) client(e) inscrit(e)</p>
-    </center>
-</div>
+    <div class="box-header" >
+            <h2><span> L</span>ogin </h2>
+    </div>
+    
 
 <form method="post" >
     <div class="form-group" >
@@ -23,7 +21,7 @@ session_start();
     </div>
     <div class="form-group" >
         <label>Password</label>
-        <input type="password" class="form-control" name="c_pass" pattern=".{8,}" required >
+        <input type="password" class="form-control" name="c_pass"  required >
     </div>
     <div class="text-center" >
         <button name="login" value="Login" class="btn btn-primary" >
@@ -34,6 +32,7 @@ session_start();
 <center>
     <a id="inscrire" href="../customer_register.php"><h4>S'inscrire ici</h4></a>
 </center>
+
 </div>
 
 <?php

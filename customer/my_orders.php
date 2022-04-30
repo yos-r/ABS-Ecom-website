@@ -16,7 +16,7 @@
             $run_customer = mysqli_query($con,$get_customer);
             $row_customer = mysqli_fetch_array($run_customer);
             $customer_id = $row_customer['customer_id'];
-            $get_orders = "select * from orders where customer_id='$customer_id'";
+            $get_orders = "select * from orders where customer_id='$customer_id' order by date desc";
             $run_orders = mysqli_query($con,$get_orders);
             $i = 0;
             while($row_orders = mysqli_fetch_array($run_orders)){

@@ -11,7 +11,7 @@ else {
 ?>
 
 <div id="content" >
-  <div class="container" >
+<div class="container" >
       <?php
           $c_email = $_SESSION['customer_email'];
           $get_customer = "select * from customers where customer_email='$c_email'";
@@ -22,13 +22,14 @@ else {
     <div class="col-md-4"><!-- the thingy that includes the sidebar Starts -->
       <?php include("requires/sidebar.php"); ?>
     </div>
+    <?php
+      if(isset($_GET['my_orders'])){
+        include("my_orders.php");
+      }?>
 
-    <div class="col-md-9" > <!-- y inclure la fonctionnalité choisie -->
-      <div class="box" >
+    <div class="col-md-12">
+      <div class="box">
         <?php
-            if(isset($_GET['my_orders'])){
-              include("my_orders.php");
-            }
             if(isset($_GET['edit_account'])) {
                 include("edit_account.php");
             }
@@ -79,6 +80,5 @@ else {
 
 </div>
 </div>
-
 <?php include("requires/footer.php");?>
 <?php }?>

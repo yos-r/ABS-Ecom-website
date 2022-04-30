@@ -3,12 +3,50 @@
     font-family:'poppins';
     src: url('./fonts/Poppins-Regular.ttf');
 }
+@font-face{
+    font-family:'waterbrush';
+    src: url('./fonts/WaterBrush-Regular.ttf');
+}
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;/*The box-sizing property allows us to include the padding and border in an element's total width and height*/
     font-family: 'poppins', sans-serif;
     scroll-behavior: smooth;/*smooth	Allows a smooth animated "scroll effect" between elements within the scrolling box.*/
+}
+.box-header h2 {
+    text-align: center;
+    margin-bottom:30px;
+}
+h2 span{
+    color: #fb911f;
+    font-size: 60px;
+    font-family: 'waterbrush';
+}
+div.col-md-12{
+    
+    padding: 10px 10px;
+    background: #fff;
+    box-shadow: 0px -1px 9px 4px rgb(255 255 255 / 80%);
+    max-width: 500px;
+    margin: auto;
+    
+}
+.form-group label{
+
+    display: block;
+	width:110px;
+	float: left;
+    color:black; 
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif; 
+}
+.form-group input{
+    display: inline-block;
+    width: 250px;
+    height: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
 }
 
 p{
