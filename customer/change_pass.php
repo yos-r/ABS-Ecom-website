@@ -20,7 +20,7 @@
             Changez le mot de passe</button>
     </div>
 </form>
-
+<br><br><br><br><br>
 <?php
 if(isset($_POST['submit'])){
     $c_email = $_SESSION['customer_email'];

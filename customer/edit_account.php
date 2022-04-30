@@ -32,6 +32,7 @@
         </button>
     </div>
 </form>
+<br><br><br><br><br><br>
 
 <?php if(isset($_POST['update'])){
 $update_id = $customer_id;
