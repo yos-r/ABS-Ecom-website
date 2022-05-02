@@ -37,37 +37,33 @@
       $p_man_img= $row_p_man['manufacturer_img'];
     
 ?>
-    <div id="details">
-        <div class="row" style="background-color:white;">
-            <h1 style="margin-top:20px;"class="text-center" > <?php echo $pro_title; ?>  Prix : <?php echo $pro_price ?> DT </h1>
+
+    <div class="row" style="background-color:white;">
+        <h1 style="margin-top:20px;"class="text-center" > <?php echo $pro_title; ?>  Prix : <?php echo $pro_price ?> DT </h1>
+    </div>
+
+    <div class="row" style="background-color:white;">
+
+        <div class="col50" style="background-color:white;">
+            <img src="images/products/<?php echo $pro_img?>" style="width:500px" >
         </div>
 
-        <div class="row" style="background-color:white;">
-            <div class="col50" style="background-color:white;">
-                <img src="images/products/<?php echo $pro_img?>" >
-            </div>
-
-            <div style="display:flex; flex-direction:column;" class="col50" style="background-color:white;">
-                <!-- formulaire pour spécifier quantité et ajouter au panier-->
-                <div class="product-desc">
-                    <p>
-                        Description: <br> <?php echo $pro_desc; ?>
-                    </p>
+        <div style="display:flex; flex-direction:column;" class="col50" style="background-color:white;">
+            <!-- formulaire pour spécifier quantité et ajouter au panier-->
+            <form action="" method="post" >
+                <div class="form-group"><!-- form-group Starts -->
+                    <label >Quantité </label>
+                    <input name="product_qty" type="number" >
+                </select>   
                 </div>
-                <form action="" method="post" >
-                    <div class="form-group"><!-- form-group Starts -->
-                        <label >Quantité </label>
-                        <input name="product_qty" type="number" >
-                    </select>  
-                    </div>
-                    <p class="text-center buttons" ><!-- text-center buttons Starts -->
-                        <button class="btn btn-primary" type="submit" name="add_cart">
-                        <i class="fa-solid fa-cart-plus" ></i></button>
-                    </p>
-                </form>
-            </div>
+                <p class="text-center buttons" ><!-- text-center buttons Starts -->
+                    <button class="btn btn-danger" type="submit" name="add_cart">
+                    <i class="fa fa-shopping-cart" ></i> Ajouter au panier </button>
+                </p>
+            </form>
         </div>
     </div>
+
 
 <?php include("includes/footer.php"); ?>
 </body>
