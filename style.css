@@ -43,7 +43,7 @@ div.col-md-12{
 }
 .form-group input{
     display: inline-block;
-    width: 100%px;
+    width: 100%;
     height: 30px;
     margin-bottom: 30px;
     margin-left: 0px;
@@ -708,6 +708,13 @@ footer .social-media .fa-brands{
   .list-content p {
       flex: 1 0 auto;
   }
+/*product details*/
+#details .row .col50 img{
+    object-fit: contain;
+}
+desc > p{
+    color: #666;
+}
 @media all and (min-width: 360px) and (max-width: 767px)
 {
     #banniere{

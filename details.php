@@ -37,7 +37,7 @@
       $p_man_img= $row_p_man['manufacturer_img'];
     
 ?>
-
+<div id="details" style="margin-bottom: 115px">
     <div class="row" style="background-color:white;">
         <h1 style="margin-top:20px;"class="text-center" > <?php echo $pro_title; ?>  Prix : <?php echo $pro_price ?> DT </h1>
     </div>
@@ -45,25 +45,30 @@
     <div class="row" style="background-color:white;">
 
         <div class="col50" style="background-color:white;">
-            <img src="images/products/<?php echo $pro_img?>" style="width:500px" >
+            <img style="object-fit:contaon" src="images/products/<?php echo $pro_img?>" style="width:500px" >
         </div>
-
-        <div style="display:flex; flex-direction:column;" class="col50" style="background-color:white;">
+        <div style="display:flex; flex-direction:column; align-items:stretch; margin: 0 10px;" class="col50" style="background-color:white;">
+            <div class="desc">
+                <p style="color: #666;">
+                    Description: <br>
+                    <?php echo $pro_desc?>
+                </p>
+            </div>
             <!-- formulaire pour spécifier quantité et ajouter au panier-->
             <form action="" method="post" >
                 <div class="form-group"><!-- form-group Starts -->
                     <label >Quantité </label>
-                    <input name="product_qty" type="number" >
+                    <input name="product_qty" type="number" style="max-width:150px;" >
                 </select>   
                 </div>
-                <p class="text-center buttons" ><!-- text-center buttons Starts -->
-                    <button class="btn btn-danger" type="submit" name="add_cart">
+                <p class=" buttons" ><!-- text-center buttons Starts -->
+                    <button class="btn btn-primary" type="submit" name="add_cart">
                     <i class="fa fa-shopping-cart" ></i> Ajouter au panier </button>
                 </p>
             </form>
         </div>
     </div>
-
+</div>
 
 <?php include("includes/footer.php"); ?>
 </body>
