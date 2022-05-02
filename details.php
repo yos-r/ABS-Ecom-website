@@ -39,7 +39,7 @@
 ?>
 <div id="details" style="margin-bottom: 115px">
     <div class="row" style="background-color:white;">
-        <h1 style="margin-top:20px;"class="text-center" > <?php echo $pro_title; ?>  Prix : <?php echo $pro_price ?> DT </h1>
+        <h1 style="margin-top:20px;"class="text-center" > <?php echo $pro_title; ?> </h1>
     </div>
 
     <div class="row" style="background-color:white;">
@@ -48,9 +48,15 @@
             <img style="object-fit:contaon" src="images/products/<?php echo $pro_img?>" style="width:500px" >
         </div>
         <div style="display:flex; flex-direction:column; align-items:stretch; margin: 0 10px;" class="col50" style="background-color:white;">
+            <!--prix du produit -->
+            <p style="color: #666;font-size:20px"> <b>Prix: </b> :
+            <br>
+            <span style="color:red; font-size:30px;font-weight:bold"><?php echo $pro_price ?> ,000&nbsp;TND</span>
+         </p>
+            
             <div class="desc">
-                <p style="color: #666;">
-                    Description: <br>
+                <p style="color: #666;font-size:20px">
+                    <b>Description: </b> <br>
                     <?php echo $pro_desc?>
                 </p>
             </div>
