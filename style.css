@@ -69,6 +69,7 @@ header{
     width: 25%;
     display: flex;
     margin: auto;
+    justify-content: flex-start ;
 }
 .logo,.logo:hover{
     color: rgb(255, 255, 255);
@@ -458,11 +459,9 @@ section{
     align-items: center;
 }
 .navbar-toggler{
-    position: fixed;
-    top: 20px;
-    right: 15px;
+    position: absolute;
+    top: 10px;
 }
-
 /*cart*/
 #content {
     width: 100%;
@@ -523,7 +522,7 @@ footer .social-media .fa-brands{
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 2;
+    z-index: 4;
     top: 0;
     left: 0;
     background-color: #000;
@@ -714,6 +713,17 @@ footer .social-media .fa-brands{
 }
 desc > p{
     color: #666;
+}
+.profile{
+    display:flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+.profile button{
+    font-size: 0.7em;
+}
+body > header > div.profile > a:nth-child(2) > button{
+    margin-left: 10px;
 }
 @media all and (min-width: 360px) and (max-width: 767px)
 {
