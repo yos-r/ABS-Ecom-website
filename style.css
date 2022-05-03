@@ -65,6 +65,18 @@ header{
     background-color:rgb(0, 0, 0);
 }
 
+.profile{
+    display:flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+.profile button{
+    font-size: 0.7em;
+}
+body > header > div.profile > a:nth-child(2) > button{
+    margin-left: 10px;
+}
+
 .logo-area{
     width: 25%;
     display: flex;
@@ -133,6 +145,9 @@ header .navbar li a:hover{
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: 0.5s;
+}
+.search-box-sm{
+    display: none;
 }
     /*result*/
     .result section{
@@ -458,9 +473,9 @@ section{
     align-items: center;
 }
 .navbar-toggler{
-    position: fixed;
-    top: 20px;
-    right: 15px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }
 
 /*cart*/
@@ -712,7 +727,7 @@ footer .social-media .fa-brands{
 #details .row .col50 img{
     object-fit: contain;
 }
-desc > p{
+.desc > p{
     color: #666;
 }
 @media all and (min-width: 360px) and (max-width: 767px)
@@ -772,12 +787,20 @@ desc > p{
     }
     .search-box input[type="text"]{
         min-width:100%;
-        
     }
     .container{
         margin-bottom: 100px;
     }
-    
+    .profile{
+        justify-content: center;
+    }
+    .search-box-lg{
+        display: none;
+    }
+    .search-box-sm{
+        margin-left:20px;
+        display: inline-block;
+    }
 }
 
 
