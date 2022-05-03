@@ -728,6 +728,9 @@ footer .social-media .fa-brands{
 .desc > p{
     color: #666;
 }
+.container{
+    margin-bottom: 100px;
+}
 @media all and (min-width: 360px) and (max-width: 767px)
 {
     #banniere{
