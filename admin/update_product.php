@@ -48,7 +48,7 @@ $product_manif=$_GET['product_manif'];
             </tr>
             <tr>
                 <td>product_cat</td>
-                <td> <input type="number" value="<?php echo $product_cat ?>" name="product_cat"> </td>
+                <td> <input type="number" value="<?php echo $product_cat ?>" name="cat_id"> </td>
             </tr>
             <tr>
                 <td>product_desc</td>

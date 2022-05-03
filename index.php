@@ -92,7 +92,7 @@ require_once("includes/main.php");
                 <img src="./images/index/kk.jpg" alt="">
             </div>
             <div class="text">
-                <p>Cliente depuis plus de 10 ans, j'ai toujours été bien servi et reçu de bons conseils. Les prix sont honnêtes et on peu profiter de remise en ouvrant un compte client. A recommander dans la région !
+                <p>Cliente depuis plus de 10 ans, j'ai toujours été bien servi et reçu de bons conseils. Les prix sont honnêtes et on peut profiter de remise en ouvrant un compte client. A recommander dans la région !
                 </p>
                 <h3>SOFIA VERGARA. </h3>
             </div>
@@ -113,7 +113,7 @@ require_once("includes/main.php");
                 <img src="./images/index/pp.jpg" alt="">
             </div>
             <div class="text">
-                <p>J ai trouver se que j avais besoin et eu de très bon conseil</p>
+                <p>J'ai trouvé ce dont j'avais besoin et eu de très bons conseils</p>
                 <h3>James Dyson</h3>
             </div>
         </div>
