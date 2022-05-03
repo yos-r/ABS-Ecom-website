@@ -15,7 +15,7 @@
         ?>
         
     </div>
-    <div  style="z-index:4;" id="mySidebar" class="sidebar">
+    <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <div class="panel-body"><!-- panel-body Starts -->
         <ul class="nav nav-pills nav-stacked" style="flex-direction: column;"><!-- nav nav-pills nav-stacked Starts -->
