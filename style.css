@@ -507,9 +507,6 @@ section{
 /*footer*/
 footer{
     display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
     z-index: 2;
     padding: 20px;
     width: 100%;
@@ -538,7 +535,7 @@ footer .social-media .fa-brands{
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 2;
+    z-index: 4;
     top: 0;
     left: 0;
     background-color: #000;
@@ -724,6 +721,7 @@ footer .social-media .fa-brands{
       flex: 1 0 auto;
   }
 /*product details*/
+
 #details .row .col50 img{
     object-fit: contain;
 }
@@ -788,9 +786,6 @@ footer .social-media .fa-brands{
     .search-box input[type="text"]{
         min-width:100%;
     }
-    .container{
-        margin-bottom: 100px;
-    }
     .profile{
         justify-content: center;
     }
@@ -800,6 +795,9 @@ footer .social-media .fa-brands{
     .search-box-sm{
         margin-left:20px;
         display: inline-block;
+    }
+    #navbarToggleExternalContent > div > form > div > section:nth-child(1){
+        padding-left: 0 ;
     }
 }
 

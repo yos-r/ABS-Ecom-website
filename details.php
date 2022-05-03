@@ -37,7 +37,7 @@
       $p_man_img= $row_p_man['manufacturer_img'];
     
 ?>
-<div id="details" style="margin-bottom: 115px">
+<div id="details" >
     <div class="row" style="background-color:white;">
         <h1 style="margin-top:20px;"class="text-center" > <?php echo $pro_title; ?> </h1>
     </div>
