@@ -2,6 +2,9 @@
 <body>    
 <header>
     <div class="profile">
+            <div class="logo-lg">
+                <a href="./index.php#banniere" class="logo"><span>A</span>BS</a><!--on doit placer le logo-->
+            </div>
             <?php
                 if(!isset($_SESSION['customer_email'])){
                     echo '<a href="../customer_register.php"><button class="btn btn-primary">S\'inscrire</button></a>';
@@ -22,8 +25,8 @@
                     ?> 
     </div>
         <nav class="navbar navbar-expand-md navbar-dark">
-            <div class="logo-area">
-                <a href="../index.php#banniere" class="logo"><span>A</span>BS</a><!--on doit placer le logo-->
+            <div class="logo-sm">
+                <a href="./index.php#banniere" class="logo"><span>A</span>BS</a><!--on doit placer le logo-->
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -42,7 +45,7 @@
                     </li>
                 </ul>
                 <div class="search-box search-box-sm">
-                <form method="get" class="search-form" action="../search.php"> 
+                <form method="get" class="search-form" action="search.php"> 
                     <input type="text" autocomplete="off" placeholder="Chercher produit..." name="searchterm" />
                     <button type="submit" name="search">chercher</button>
                     <div class="result" style="width: 100%;box-sizing: border-box;"></div>
@@ -50,7 +53,7 @@
             </div>
         </nav> 
         <div class="search-box search-box-lg">
-            <form method="get" class="search-form" action="search.php"> 
+            <form method="get" class="search-form" action="../search.php"> 
                 <input type="text" autocomplete="off" placeholder="Chercher produit..." name="searchterm" />
                 <button type="submit" name="search">chercher</button>
                 <div class="result" style="width: 100%;box-sizing: border-box;"></div>

@@ -58,7 +58,7 @@ header{
     position: sticky;   
     top: 0%;
     left: 0%;
-    padding: 20px 10px;
+    padding: 5px 10px;
     width: 100%;
     display: block;
     z-index: 3;/*z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display:flex elements). */
@@ -71,16 +71,19 @@ header{
     margin-right: 20px;
 }
 .profile button{
-    font-size: 0.7em;
-}
-body > header > div.profile > a:nth-child(2) > button{
-    margin-left: 10px;
+    font-size: 0.5em;
+    margin: 5px 10px;
+    font-weight: bolder;
 }
 
-.logo-area{
+.logo-lg{
+    position: absolute;
+    left: 55px;
     width: 25%;
     display: flex;
-    margin: auto;
+}
+.logo-sm{
+    display: none;
 }
 .logo,.logo:hover{
     color: rgb(255, 255, 255);
@@ -93,7 +96,7 @@ body > header > div.profile > a:nth-child(2) > button{
 }
 .collapse{
     width: 75%;
-    justify-content: flex-end;
+    justify-content: center;
     margin-right: 40px;
 }
 .navbar{
@@ -125,19 +128,22 @@ header .navbar li a:hover{
 }
 .search-box form{
     width: 100%;
-    margin: 10px 0px;
+    margin-bottom: 10px;
+    
 }
 
 .search-box input[type="text"]{
     padding: 5px 10px;
     min-width:75%;
+    font-size: 0.7em;
     border: none;
     
 }
 .search-box button[type='submit']{
     padding: 5px 10px;
-    font-size: 1em;
+    font-size: 0.7em;
     color: #fff;
+    font-weight: bolder;
     background: #fb911f;
     border: none;
     display: inline-block;
@@ -506,8 +512,9 @@ section{
 
 /*footer*/
 footer{
+    position: fixed;
+    bottom: 0;
     display: flex;
-    z-index: 2;
     padding: 20px;
     width: 100%;
     background: #000;
@@ -736,6 +743,9 @@ footer .social-media .fa-brands{
     #banniere{
         padding:0;
     }
+    header{
+        padding-bottom: 50px;
+    }
     .btn2{
         margin-left: 0;
     }
@@ -796,13 +806,23 @@ footer .social-media .fa-brands{
         display: none;
     }
     .search-box-sm{
+        margin-top: 10px;
         margin-left:20px;
         display: inline-block;
     }
     #navbarToggleExternalContent > div > form > div > section:nth-child(1){
         padding-left: 0 ;
     }
+    .logo-sm{
+        position: absolute;
+        top: 5px;
+        width: 25%;
+        display: flex;
+    }
+    .logo-lg{
+        display: none;
+    }
+    #navbarToggleExternalContent{
+        margin-top: 50px;
+    }
 }
-
-
-
