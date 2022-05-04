@@ -7,6 +7,7 @@ include("includes/main.php"); //header
 ?>
 <div id="content" >
 <div class="container" >
+
     <div class="col-md-9" id="cart" >
         <div class="box" >
         <form action="cart.php" method="post" enctype="multipart-form-data" ><!-- form Starts -->
@@ -75,8 +76,9 @@ include("includes/main.php"); //header
                 </div>
             </form><!-- form Ends -->
             </div> <!-- box ends -->
-            
+            </div>
             <br><br><br><br><br><br><br>
+            
 
 <?php
 function update_cart(){
@@ -97,6 +99,7 @@ echo @$up_cart = update_cart();
 
 </div><!-- container Ends -->
 </div><!-- content Ends -->
+
 <?php include("includes/footer.php"); ?>
 
 <!-- script de modification de la quantité -->
@@ -119,6 +122,5 @@ echo @$up_cart = update_cart();
   });
 
 </script>
-
 </body>
 </html>
